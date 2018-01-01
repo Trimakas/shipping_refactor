@@ -1,0 +1,195 @@
+<html>
+<script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+
+<body class="no_overflow">
+
+  <div class="container top-pad">
+    <div class="row">
+      <div class="col s4">
+        <%= image_tag "logo.png", class:"responsive-img" %>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row valign-wrapper">
+    <div class="left_chevron">
+      <i id="chevron_left" class="waves-effect waves-circle large material-icons purple-text text-darken-4 hidden left_chevron">chevron_left</i>
+    </div>
+
+      <div id="6" class="card large card_center">
+        <div class="card-image">
+          <%= image_tag "6.png" %> 
+          <span class="card-title"></span>
+        </div>
+        <div class="card-content card_position card-content_fixed">
+          <p>The credentials you recieve will look like this, and you will enter these credentials in the next section.
+          </p>
+          <br>
+          <%= image_tag "creds-short.png", class: "responsive-img onboard_image z-depth-3" %>
+        </div>
+      </div> <!-- end of fourth card -->
+
+
+      <div id="5" class="card large card_center">
+        <div class="card-image">
+          <%= image_tag "5.png" %> 
+          <span class="card-title"></span>
+        </div>
+        <div class="card-content card_position card-content_fixed">
+          <p>Next within Amazon, enter in our name "ByteStand" and the developer id you copied in the previous step.
+          </p>
+          <%= image_tag "enter-info.gif", class: "responsive-img onboard_image z-depth-3" %>
+        </div>
+      </div> <!-- end of fourth card -->
+      
+      <div id="4" class="card large card_center">
+        <div class="card-image">
+          <%= image_tag "4.png" %> 
+          <span class="card-title"></span>
+        </div>
+        <div class="card-content card_position card-content_fixed">
+          <p>Now, open up your Amazon seller dashboard and authorize a developer.
+          </p>
+          <%= image_tag "user-permissions.gif", class: "responsive-img onboard_image z-depth-3" %>
+        </div>
+      </div> <!-- end of fourth card -->
+
+      <div id="3" class="card large card_center">
+        <div class="card-image">
+          <%= image_tag "3.png" %> 
+          <span class="card-title"></span>
+        </div>
+        <div class="card-content card_position card-content_fixed">
+          <p>Next you'll need to click the copy button, and copy
+              our developer id that matches the location of your
+              Amazon FBA account.
+          </p>
+          <br>
+          <div class="row">
+            <div class="col s12">
+                
+                <div class="row">
+                    <div class="col s8 onboard">
+                      <p class="card-content_fixed bold">North America</p>
+                      <input id="dev_id_us" type="text" class="center-align fixed_input" value="9152-6216-7461" readonly>
+                    </div>
+                    <div class="input-field col s4 onboard">
+                      <button id="us_copy" data-clipboard-text="9152-6216-7461" class="btn waves-effect waves-light fixed_button purple_button">copy</button>
+                    </div>
+                </div>
+                
+              <div class="row">
+                    <div class="col s8 onboard">
+                      <p class="card-content_fixed bold">EU & UK</p>
+                      <input id="dev_id_eu" type="text" class="center-align fixed_input" value="4048-6340-0484" readonly>
+                    </div>
+                    <div class="input-field col s4 onboard">
+                      <button id="eu_copy" data-clipboard-text="4048-6340-0484" class="btn waves-effect waves-light fixed_button purple_button">copy</button>
+                    </div>
+                </div>
+                
+            </div>
+          </div>
+
+        </div>
+      </div> <!-- end of fourth card -->
+      
+      <div id="2" class="card large card_center">
+        <div class="card-image">
+          <%= image_tag "2.png" %> 
+          <span class="card-title"></span>
+        </div>
+        <div class="card-content card_position card-content_fixed">
+          <p>You will need to enable carrier calculated shipping
+            on your Shopify store. Its free if you signed
+            up for the annual plan or are on the advanced plan, otherwise its just $20/month.
+            Call Shopify to enable it:
+            <ul class="bold">North America: 888-746-7439</ul>
+            <ul class="bold">EU & UK: 0800-808-5233</ul>
+          </p>
+        </div>
+      </div> <!-- end of third card -->
+      
+      <div id="1" class="card large card_center">
+        <div class="card-image">
+          <%= image_tag "1.png" %> 
+          <span class="card-title"></span>
+        </div>
+        <div class="card-content card_position card-content_fixed">
+          <p>For $25/month we fulfill an unlimited number of
+            orders, so you don't have too. Plus you can enter multiple FBA accounts
+            and we'll fulfill your orders from the FBA center closests to your customers.</p>
+        </div>
+      </div> <!-- end of second card -->      
+      
+      <div id="0" class="card large card_center">
+        <div class="card-image"> 
+          <%= image_tag "hi.png" %> 
+          <span class="card-title"></span>
+        </div>
+        <div class="card-content card_position">
+          <p>Welcome to FBA Shipping by ByteStand.
+            A super simple way to automate fulfilling FBA items
+            in the US and abroad.</p>
+        </div>
+        <div class="card-action">
+          <button id="first_button" class="waves-effect btn stroke-btn tap">Let's Get Started!</button>
+        </div>
+      </div><!-- end of first card -->
+
+
+    <div class="right_chevron">
+      <i id="chevron_right" class="waves-effect waves-circle large material-icons purple-text text-darken-4 hidden right_chevron">chevron_right</i>
+    </div>
+    </div> <!-- end of main row -->
+  </div> <!-- end of container -->
+
+<!--start of the last page with multiple countries-->
+<div id="last_onboard_page" class="container hidden">
+  <div class="row">
+    <div class="col s6 offset-s1 last_page_border z-depth-2">
+      
+      <div class="row">
+      <p class="bold last_page_margin">Development Id's</p>
+          <div class="col s6 onboard">
+            <p class="card-content_fixed last_page_margin">North America</p>
+            <input id="dev_id_us" type="text" class="center-align fixed_input" value="9152-6216-7461" readonly>
+          </div>
+          <div class="input-field col s6 onboard">
+            <button id="us_copy" data-clipboard-text="9152-6216-7461" class="btn waves-effect waves-light fixed_button fixed_button_last_page purple_button">copy</button>
+          </div>
+      </div>
+      
+    <div class="row">
+          <div class="col s6 onboard">
+            <p class="card-content_fixed last_page_margin">EU & UK</p>
+            <input id="dev_id_eu" type="text" class="center-align fixed_input" value="4048-6340-0484" readonly>
+          </div>
+          <div class="input-field col s6 onboard">
+            <button id="eu_copy" data-clipboard-text="4048-6340-0484" class="btn waves-effect waves-light fixed_button fixed_button_last_page purple_button">copy</button>
+          </div>
+      </div>
+      
+  </div> <!--end of columns for dev ids..-->
+
+    <div class="col s4 offset-s1-last-page last_page_border z-depth-2">
+    
+      <div class="row last_page_section">
+          <p class="bold last_page_margin">How do I retrieve my Amazon credentials</p>
+          <div class="col s6 onboard">
+            <%= image_tag "normal-tube.png" %> 
+          </div>
+      </div>
+
+  </div> <!--end of columns for youtube links..-->
+  </div> <!--end of the last page row-->
+</div> <!--end of the last page container-->
+
+
+  
+  </body>
+</html>

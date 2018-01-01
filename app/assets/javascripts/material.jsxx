@@ -1,0 +1,42 @@
+/*global $*/
+
+$(document).ready(function(){
+  firstCard();
+});
+
+var page = 0;
+function firstCard(){
+  $('#first_button').click(function () {
+    console.log("first button got clicked");
+    $('#first_card').addClass( "gone_left", 1000, "swing" );
+    $("#chevron_right").removeClass("hidden");
+    $("#chevron_right").attr("id", "chevron_to_third_card");  
+    $("#second_card").removeClass("hidden");
+    secondCard();
+  });
+}
+
+function secondCard(){
+  $('#chevron_to_third_card').ready(function(){
+    $('#chevron_to_third_card').click(function () {
+      console.log("this is the first chevron clicking")
+      $('#second_card').addClass( "gone_left", 1000, "swing" );
+      $("#chevron_left").removeClass("hidden");
+      $("#chevron_left").attr("id", "chevron_to_second_card"); 
+      $("#chevron_right").attr("id", "chevron_to_fourth_card");  
+      $("#third_card").removeClass("hidden");
+    });
+  });
+}
+
+function huh(){
+  console.log("hi");
+}
+
+function tryMe(){
+  $('#chevron_to_second_card').click(function () {
+    console.log("This getting hit?");
+    $('#third_card').addClass( "gone_right", 1000, "swing" );
+    $('#second_card').removeClass( "hidden" );
+  });
+}

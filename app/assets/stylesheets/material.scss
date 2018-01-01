@@ -1,0 +1,149 @@
+@media only screen and (min-width: 900px){
+html {
+    font-size: 18px;
+  }
+}
+
+last_page_section {
+  margin-top: -4% !important;
+}
+
+
+.row .col.offset-s1-last-page {
+    margin-left: 3.3333333333% !important;
+}
+
+
+.last_page_border {
+    border-style: solid;
+    border-color: #bdbdbd;
+    border-width: 1px;
+    padding-right: 30px !important;
+    padding-left: 30px !important;
+}
+
+
+.last_page_margin {
+  margin-bottom: 1px !important;
+}
+
+.onboard_image {
+  max-width: 350px !important;
+  margin-left: 30px;
+}
+
+.purple_button {
+  background-color: #6A0080 !important;
+}
+
+.card.large {
+    height: 600px;
+}
+
+.row .col .onboard {
+ padding: 0px !important;
+}
+
+.fixed_input {
+  background-color: #c8e6c9 !important;
+  border-bottom: none !important;
+  height: 2rem !important;
+}
+
+.fixed_button {
+  height: 2rem !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  margin: 5% 0 0 -50%;
+}
+
+.fixed_button_last_page {
+  margin: 10.5% 0 0 -50% !important;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+
+.no_overflow {
+  overflow: hidden !important;
+}
+
+.gone_left {
+	left: -50% !important;
+}
+
+.gone_right {
+	left: 150% !important;
+}
+
+.card_center {
+  position: absolute !important;
+	top: 50% !important;
+	transform: translateY(-50%) translateX(-50%) !important;
+	left: 50%;
+}
+
+
+.left_chevron {
+  position: absolute !important;
+	top: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	left: 20%;
+}
+
+.right_chevron {
+  position: absolute !important;
+	top: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	left: 80%;
+}
+
+.card_position {
+  position: absolute !important;
+	top: 65%;
+	transform: translateY(-50%) translateX(-50%);
+	left: 53%;
+	right: -25%;
+}
+
+.hidden {
+  display: none;
+}
+
+.stroke-btn {
+  background-color: white !important;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #311b92;
+  color: #311b92 !important;
+}
+
+.top-pad {
+  padding-top: 20px;
+}
+
+.card-content_fixed {
+  max-height: 50% !important;
+}
+
+.card { 
+    width: 650px;
+    overflow: hidden; 
+}
+
+.custom-align .card {
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-align .card-content {
+  flex: 1;
+  max-height: 100% !important;
+  align-items: center;
+  display: flex;
+  margin-bottom: 0px;
+}
