@@ -14,6 +14,13 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 gem 'materialize-sass'
+
+# gem 'minitest', '5.11.1'
+#
+# gem 'nokogiri', '1.8.1'
+#
+# gem 'bootstrap', '~> 4.0.0.beta3'
+
 gem 'font-awesome-sass'
 
 
