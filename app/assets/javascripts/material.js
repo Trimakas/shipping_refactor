@@ -57,10 +57,8 @@ function remainingCards(){
         var c = $('#page-' + page);
         c.animateCss('slideOutLeft', function () {
             c.addClass("hide");
-            console.log("slideOutLeft hide " + c.attr('id'));
         });
         $('#page-' + ++page).removeClass("hide");
-        console.log("show " + '#page-' + page);
 
         manageChevrons();
     });
@@ -70,10 +68,8 @@ function remainingCards(){
         var c = $('#page-' + page);
         c.animateCss('slideOutRight', function () {
             c.addClass("hide");
-            console.log("slideOutRight hide " + c.attr('id'));
         });
         $('#page-' + --page).removeClass("hide");
-        console.log("show " + '#page-' + page);
 
         manageChevrons();
     });
@@ -82,13 +78,43 @@ function remainingCards(){
 $(document).ready(function(){
     zeroCard();
 
-    $('#us_copy, #eu_copy').on("click", function(){
-        console.log("copy clicking");
+    $('.us_copy, .eu_copy').on("click", function(){
+
         var value = $(this).data('clipboard-text');
         var $temp = $("<input>");
         $("body").append($temp);
         $temp.val(value).select();
         document.execCommand("copy");
         $temp.remove();
-    })
+    });
+
+    $('#add_account').on('click', function (){
+        var last = $('.credential').last();
+        var credential = last.clone();
+        credential.find('input').val("");
+
+        last.after(credential);
+        credential.animateCss('slideInDown', function () {
+            var removes = $('.remove');
+            if(removes.size() === 1){
+                removes.addClass('hide');
+            }else{
+                removes.removeClass('hide');
+            }
+        });
+
+    });
+
+    $(this).on('click', '.remove', function (){
+        var credential = $(this).parent();
+        credential.nextAll('.credential, .bottom-card').animateCss('slideOutUp', function () {
+            credential.remove();
+            var removes = $('.remove');
+            if(removes.size() === 1){
+                removes.addClass('hide');
+            }else{
+                removes.removeClass('hide');
+            }
+        });
+    });
 });

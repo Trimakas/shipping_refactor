@@ -33,6 +33,36 @@
     animation-name: slideOutRight;
 }
 
+@keyframes slideOutUp {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        visibility: hidden;
+        transform: translate3d(0, -100%, 0);
+    }
+}
+
+.slideOutUp {
+    animation-name: slideOutUp;
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translate3d(0, -100%, 0);
+        visibility: visible;
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.slideInDown {
+    animation-name: slideInDown;
+}
+
 .left_chevron, .right_chevron{
     position: absolute;
     text-align: center;
@@ -76,6 +106,16 @@
 
 .shadowed{
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3) !important;
+}
+
+.credential{
+    position: relative;
+    z-index: 0;
+    background: white;
+}
+
+.top-card{
+    z-index: 1;
 }
 
 .label{
@@ -166,6 +206,12 @@
     color: #311b92 !important;
 }
 
+.remove{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
 .top-marg{
     margin: 20px 0 0 0;
 }
@@ -212,8 +258,8 @@
     margin-bottom: 0;
 }
 
-#page-0{
-    z-index: 0;
+.relative{
+    position: relative;
 }
 
 /* xl */
