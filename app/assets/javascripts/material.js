@@ -2,11 +2,29 @@
 
 var page = 0;
 
+$.fn.extend({
+    animateCss: function (animationName, callback) {
+        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+        this.addClass('animated ' + animationName).one(animationEnd, function() {
+            $(this).removeClass('animated ' + animationName);
+            if (callback) {
+                callback();
+            }
+        });
+        return this;
+    }
+});
+
 function zeroCard(){
     $('#first_button').click(function () {
-        $('#page-' + page).addClass("hide");//.addClass("gone_left", 1000, "swing");
-        $('#page-' + ++page).removeClass("hide");//.removeClass("gone_left").removeClass("gone_right");
+        var c = $('#page-' + page);
+        c.animateCss('slideOutLeft', function () {
+            c.addClass("hide");
+        });
+        $('#page-' + ++page).removeClass("hide");
+
         remainingCards();
+
         manageChevrons();
     });
 }
@@ -35,23 +53,30 @@ function manageChevrons() {
 
 function remainingCards(){
     $('.right_chevron i').click(function () {
-        forward();
+
+        var c = $('#page-' + page);
+        c.animateCss('slideOutLeft', function () {
+            c.addClass("hide");
+            console.log("slideOutLeft hide " + c.attr('id'));
+        });
+        $('#page-' + ++page).removeClass("hide");
+        console.log("show " + '#page-' + page);
+
+        manageChevrons();
     });
+
     $('.left_chevron i').click(function () {
-        back();
+
+        var c = $('#page-' + page);
+        c.animateCss('slideOutRight', function () {
+            c.addClass("hide");
+            console.log("slideOutRight hide " + c.attr('id'));
+        });
+        $('#page-' + --page).removeClass("hide");
+        console.log("show " + '#page-' + page);
+
+        manageChevrons();
     });
-}
-
-function forward(){
-    $('#page-' + page).addClass("hide");//.addClass("gone_left", 1000, "swing");
-    $('#page-' + ++page).removeClass("hide");//.removeClass("gone_left").removeClass("gone_right");
-    manageChevrons();
-}
-
-function back(){
-    $('#page-' + page).addClass("hide");//.addClass("gone_right", 1000, "swing");
-    $('#page-' + --page).removeClass("hide");//.removeClass("gone_left").removeClass("gone_right");
-    manageChevrons();
 }
 
 $(document).ready(function(){

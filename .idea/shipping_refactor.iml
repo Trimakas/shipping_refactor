@@ -106,18 +106,6 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="autoprefixer-rails (vbundled(7.2.4)) [path][gem]">
-        <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/autoprefixer-rails-7.2.4/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/autoprefixer-rails-7.2.4/vendor" />
-        </CLASSES>
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/autoprefixer-rails-7.2.4/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/autoprefixer-rails-7.2.4/vendor" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
       <library name="binding_of_caller (vbundled(0.7.3)) [path][gem]">
         <CLASSES>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/binding_of_caller-0.7.3/lib" />
@@ -126,20 +114,6 @@
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/binding_of_caller-0.7.3/lib" />
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/binding_of_caller-0.7.3/ext" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="bootstrap (vbundled(4.0.0.beta3)) [path][gem]">
-        <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/bootstrap-4.0.0.beta3/tasks" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/bootstrap-4.0.0.beta3/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/bootstrap-4.0.0.beta3/assets" />
-        </CLASSES>
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/bootstrap-4.0.0.beta3/tasks" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/bootstrap-4.0.0.beta3/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/bootstrap-4.0.0.beta3/assets" />
         </SOURCES>
       </library>
     </orderEntry>
@@ -452,18 +426,6 @@
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.1/bin" />
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.1/tasks" />
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/nokogiri-1.8.1/patches" />
-        </SOURCES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="popper_js (vbundled(1.12.9)) [path][gem]">
-        <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/popper_js-1.12.9/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/popper_js-1.12.9/assets" />
-        </CLASSES>
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/popper_js-1.12.9/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/popper_js-1.12.9/assets" />
         </SOURCES>
       </library>
     </orderEntry>

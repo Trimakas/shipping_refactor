@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="">
 
 <div class="top-pad">
     <div class="row">
@@ -12,55 +12,133 @@
         </div>
     </div>
     <div class="row">
-        <div class="col s4 m2 l3 hide-on-med-and-down show-on-large center-align hide left_chevron">
-            <i class="waves-effect waves-circle large material-icons purple-text text-darken-4">chevron_left</i>
-        </div>
+        <!--<div class="col s4 m2 l3 hide-on-med-and-down show-on-large center-align hide left_chevron">-->
+            <!--<i class="waves-effect waves-circle large material-icons purple-text text-darken-4">chevron_left</i>-->
+        <!--</div>-->
 
-        <div id="page-7" class="col s12 l10 offset-l1 hide">
-            <div class="row">
-                <div class="col s12 l5 offset-l2 last_page_border z-depth-2">
-                    <p class="bold">Development Id's</p>
-                    <div class="row">
-                        <div class="col s12 zero-padding">
-                            <p>North America</p>
-                            <div class="row zero-margin">
-                                <div class="col s6 zero-padding">
-                                    <input id="dev_id_us" type="text" class="center-align fixed_input" value="9152-6216-7461" readonly>
-                                </div>
-                                <div class="col s6 zero-padding">
-                                    <button id="us_copy" data-clipboard-text="9152-6216-7461" class="btn waves-effect waves-light fixed_button purple_button">copy</button>
-                                </div>
-                            </div>
+        <div id="page-7" class="col s12 hide">
+            <div class="row top-pad">
+                <div class="col s12 m10 l5 offset-m1 offset-l1 z-depth-2 zero-padding">
+                    <!--<p class="bold">Development Id's</p>-->
+                    <div class="row zero-margin top-pad">
+                        <div class="col s12 m12 l3 zero-padding center-align">
+                            North America, Mexico
+                        </div>
+                        <div class="col s10 m5 l5 offset-s1 offset-m1 zero-padding">
+                            <input id="dev_id_us" type="text" class="center-align fixed_input shadowed zero-padding" value="9152-6216-7461" readonly>
+                        </div>
+                        <div class="col s10 m5 l3 offset-s1 zero-padding">
+                            <button id="us_copy" data-clipboard-text="9152-6216-7461" class="btn shadowed waves-effect waves-light fixed_button purple_button">copy</button>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col s12 zero-padding">
-                            <p>EU &amp; UK</p>
-                            <div class="row zero-margin">
-                                <div class="col s6 zero-padding">
-                                    <input id="dev_id_eu" type="text" class="center-align fixed_input" value="4048-6340-0484" readonly="">
-                                </div>
-                                <div class="col s6 zero-padding">
-                                    <button id="eu_copy" data-clipboard-text="4048-6340-0484" class="btn waves-effect waves-light fixed_button purple_button">copy</button>
-                                </div>
-                            </div>
+
+                    <div class="row zero-margin">
+                        <div class="col s12 m12 l3 zero-padding center-align">
+                            EU &amp; UK
+                        </div>
+                        <div class="col s10 m5 l5 offset-s1 offset-m1 zero-padding">
+                            <input id="dev_id_eu" type="text" class="center-align fixed_input shadowed zero-padding" value="4048-6340-0484" readonly>
+                        </div>
+                        <div class="col s10 m5 l3 offset-s1 zero-padding">
+                            <button id="eu_copy" data-clipboard-text="4048-6340-0484" class="btn shadowed waves-effect waves-light fixed_button purple_button">copy</button>
                         </div>
                     </div>
                 </div> <!--end of columns for dev ids..-->
 
-                <div class="col s12 l3 offset-l1 last_page_border z-depth-2">
+                <div class="col s12 m10 l4 offset-m1 offset-l1 z-depth-2">
                     <div class="row">
-                        <p class="center-align bold">How do I retrieve my Amazon credentials</p>
+                        <p class="center-align bold top-marg">How do I retrieve my Amazon credentials</p>
                         <div class="col s12 zero-padding center-align">
-                            <%= image_tag "normal-tube.png" %>
+                            <%= image_tag "normal-tube.png", style: "max-height: 66px; max-width: 100%;" %>
                         </div>
                     </div>
+                </div> <!--end of columns for youtube links..-->
 
+                <div class="col s12 m10 l10 offset-m1 offset-l1 z-depth-2 top-marg">
+                    <div class="row top-pad">
+                        <div class="col s12 m8 l6 offset-m2">
+                            <div class="row">
+                                <div class="col s12 top-marg">
+                                    <div class="row">
+                                        <div class="col s12 m12 l3 zero-padding label">
+                                            Seller ID
+                                        </div>
+                                        <div class="col s4 m3 l2 zero-padding">
+                                            <button class="purple_icon center-align shadowed">
+                                        <span>
+                                            <i class="fa fa-user-o fa-fw"></i>
+                                        </span>
+                                            </button>
+                                        </div>
+                                        <div class="col s8 m9 l7 zero-padding">
+                                            <input id="dev_id_us" type="text" class="center-align input shadowed" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s12">
+                                    <div class="row">
+                                        <div class="col s12 m12 l3 zero-padding label">
+                                            Marketplace
+                                        </div>
+                                        <div class="col s4 m3 l2 zero-padding">
+                                            <button class="purple_icon center-align shadowed">
+                                        <span>
+                                            <i class="fa fa-globe fa-fw"></i>
+                                        </span>
+                                            </button>
+                                        </div>
+                                        <div class="col s8 m9 l7 zero-padding">
+                                            <input id="dev_id_us" type="text" class="center-align input shadowed" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s12">
+                                    <div class="row zero-margin">
+                                        <div class="col s12 m12 l3 zero-padding label">
+                                            Auth Token
+                                        </div>
+                                        <div class="col s4 m3 l2 zero-padding">
+                                            <button class="purple_icon center-align shadowed">
+                                                <span>
+                                                    <i class="fa fa-key fa-fw"></i>
+                                                </span>
+                                            </button>
+                                        </div>
+                                        <div class="col s8 m9 l7 zero-padding">
+                                            <input id="dev_id_us" type="text" class="center-align input shadowed" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col s12 m8 l5 offset-m2 offset-l1 top-10-marg">
+                            <div class="row">
+                                <div class="col s12">
+                                    <button class="waves-effect btn stroke-btn tap add-countries-button">Add countries to this marketplace</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!--end of columns for youtube links..-->
+
+                <div class="col s12 m10 l10 offset-m1 offset-l1 z-depth-2 top-marg">
+                    <div class="row top-pad bot-pad zero-margin">
+                        <div class="col s12 m2 center-align">
+                            <button class="waves-effect btn tap purple_icon circle center-align shadowed">
+                                <span>
+                                    <i class="fa fa-plus fa-fw"></i>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="col s12 m10">
+                            <p class="top-marg">Add additional Amazon accounts</p>
+                        </div>
+                    </div>
                 </div> <!--end of columns for youtube links..-->
             </div>
         </div> <!-- end of fourth card -->
 
-        <div id="page-6" class="col s10 m8 l6 offset-s1 offset-m2 card large hide">
+        <div id="page-6" class="col s10 m8 l6 offset-s1 offset-m2 offset-l3 card large hide">
             <div class="card-image">
                 <%= image_tag "6.png" %>
                 <span class="card-title"></span>
@@ -82,45 +160,45 @@
         </div> <!-- end of fourth card -->
 
 
-        <div id="page-5" class="col s10 m8 l6 offset-s1 offset-m2 card large hide">
+        <div id="page-5" class="col s10 m8 l6 offset-s1 offset-m2 offset-l3 card large hide">
             <div class="card-image">
                 <%= image_tag "5.png" %>
                 <span class="card-title"></span>
             </div>
             <div class="card-content">
                 <div class="row">
-                    <div class="col s7">
+                    <div class="col s12 m6 bot-marg">
                         <p class="center-align">
                             Next within Amazon, enter in our name "ByteStand" and the developer id you copied in the previous step.
                         </p>
                     </div>
-                    <div class="col s5">
+                    <div class="col s12 m6">
                         <%= image_tag "enter-info.gif", class: "responsive-img zero-padding_image z-depth-3" %>
                     </div>
                 </div>
             </div>
         </div> <!-- end of fourth card -->
 
-        <div id="page-4" class="col s10 m8 l6 offset-s1 offset-m2 card large hide">
+        <div id="page-4" class="col s10 m8 l6 offset-s1 offset-m2 offset-l3 card large hide">
             <div class="card-image">
                 <%= image_tag "4.png" %>
                 <span class="card-title"></span>
             </div>
             <div class="card-content">
                 <div class="row">
-                    <div class="col s7">
+                    <div class="col s12 m6 bot-marg">
                         <p class="center-align">
                             Now, open up your Amazon seller dashboard and authorize a developer.
                         </p>
                     </div>
-                    <div class="col s5">
+                    <div class="col s12 m6">
                         <%= image_tag "user-permissions.gif", class: "responsive-img zero-padding_image z-depth-3" %>
                     </div>
                 </div>
             </div>
         </div> <!-- end of fourth card -->
 
-        <div id="page-3" class="col s10 m8 l6 offset-s1 offset-m2 card large hide">
+        <div id="page-3" class="col s10 m8 l6 offset-s1 offset-m2 offset-l3 card large hide">
             <div class="card-image">
                 <%= image_tag "3.png" %>
                 <span class="card-title"></span>
@@ -138,28 +216,28 @@
                             </div>
                         </div>
 
-                        <div class="row zero-margin">
+                        <div class="row bot-marg">
                             <div class="col s12 zero-padding">
-                                <p class="bold">North America</p>
                                 <div class="row zero-margin">
-                                    <div class="col s8 zero-padding">
+                                    <p class="bold">North America</p>
+                                    <div class="col s12 l8 zero-padding">
                                         <input id="dev_id_us" type="text" class="center-align fixed_input" value="9152-6216-7461" readonly>
                                     </div>
-                                    <div class="col s4 zero-padding">
+                                    <div class="col s12 l4 zero-padding">
                                         <button id="us_copy" data-clipboard-text="9152-6216-7461" class="btn waves-effect waves-light fixed_button purple_button">copy</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="row zero-margin">
+                        <div class="row bot-marg">
                             <div class="col s12 zero-padding">
-                                <p class="bold">EU & UK</p>
                                 <div class="row zero-margin">
-                                    <div class="col s8 zero-padding">
+                                    <p class="bold">EU & UK</p>
+                                    <div class="col s12 l8 zero-padding">
                                         <input id="dev_id_eu" type="text" class="center-align fixed_input" value="4048-6340-0484" readonly>
                                     </div>
-                                    <div class="col s4 zero-padding">
+                                    <div class="col s12 l4 zero-padding">
                                         <button id="eu_copy" data-clipboard-text="4048-6340-0484" class="btn waves-effect waves-light fixed_button purple_button">copy</button>
                                     </div>
                                 </div>
@@ -170,7 +248,7 @@
             </div>
         </div> <!-- end of fourth card -->
 
-        <div id="page-2" class="col s10 m8 l6 offset-s1 offset-m2 card large hide">
+        <div id="page-2" class="col s10 m8 l6 offset-s1 offset-m2 offset-l3 card large hide">
             <div class="card-image">
                 <%= image_tag "2.png" %>
                 <span class="card-title"></span>
@@ -238,11 +316,11 @@
             </div>
         </div><!-- end of first card -->
 
-        <div class="col s6 m4 l3 show-on-med-and-down hide-on-large-only hide center-align left_chevron">
+        <div class="col s6 m4 l3 hide center-align left_chevron">
             <i class="waves-effect waves-circle large material-icons purple-text text-darken-4">chevron_left</i>
         </div>
 
-        <div class="col s6 m4 l3 offset-m8 center-align hide right_chevron">
+        <div class="col s6 m4 l3 offset-s6 offset-m8 offset-l9 center-align hide right_chevron">
             <i class="waves-effect waves-circle large material-icons purple-text text-darken-4">chevron_right</i>
         </div>
     </div> <!-- end of main row -->

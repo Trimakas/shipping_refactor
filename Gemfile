@@ -15,14 +15,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 gem 'materialize-sass'
 
-# gem 'minitest', '5.11.1'
-#
-# gem 'nokogiri', '1.8.1'
-#
-# gem 'bootstrap', '~> 4.0.0.beta3'
-
 gem 'font-awesome-sass'
-
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
