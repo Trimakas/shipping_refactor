@@ -63,6 +63,10 @@
     animation-name: slideInDown;
 }
 
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked{
+    position: relative;
+}
+
 .left_chevron, .right_chevron{
     position: absolute;
     text-align: center;
@@ -139,7 +143,6 @@
 
 .purple_button {
     background-color: #6A0080 !important;
-    border: none !important;
 }
 
 .add-countries-button{
@@ -210,6 +213,51 @@
     position: absolute;
     right: 0;
     top: 0;
+}
+
+#countries{
+    //width: 70vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.continents{
+    height: 40vh;
+    overflow-y: scroll;
+}
+
+.continents .collapsible{
+    margin: 0;
+    border: none;
+}
+
+.continents .collapsible-header{
+    background: none !important;
+    border: none !important;
+    font-size: 1rem !important;
+}
+
+.continents .collapsible-header i{
+    font-size: 1rem !important;
+}
+
+.continent-label{
+    border-bottom: 1px #616161 solid;
+}
+
+.country{
+    margin-top: 30px;
+    border-bottom: 1px #616161 solid;
+}
+
+.modal-content{
+    height: 60vh !important;
+    padding-top: 0 !important;
+    overflow: hidden !important;
+}
+
+.modal-content .col{
+    margin-top: 10px;
 }
 
 .top-marg{

@@ -15,6 +15,44 @@ $.fn.extend({
     }
 });
 
+function generate() {
+    var block = $('.continents ul');
+
+    for (var continent in continents) {
+        // skip loop if the property is from prototype
+        if (!continents.hasOwnProperty(continent)) continue;
+
+        var countries = continents[continent];
+
+        var string_c = "<li class=\"col s12 continent "+continent+"\">" +
+            "                <div class=\"col s10 m11\">" +
+            "                    <input class=\"continent-checkbox filled-in\" type=\"checkbox\" id=\""+continent+"\"/>" +
+            "                    <label for=\""+continent+"\">"+continent+"</label>" +
+            "                </div>";
+        if(countries.length !== 0)
+            string_c += "                <div class=\"col s1 m1 collapsible-header\">" +
+                        "                    <span><i class=\"fa fa-arrow-down fa-lg\"></i></span>" +
+                        "                </div>";
+
+        var string = "<div class=\"col s12 collapsible-body\">";
+        for (var country in countries){
+
+            if (!countries.hasOwnProperty(country)) continue;
+
+            country = countries[country];
+            var country_name = country.name.toLowerCase().replace(' ', '-');
+
+            string += "<div class=\"col s11 offset-s1 country "+country_name+"\">" +
+                            "<input class=\"country-checkbox\" type=\"checkbox\" id=\""+country_name+"\"/>" +
+                            "<label for=\""+country_name+"\">"+country.emoji + "&nbsp;&nbsp;&nbsp;&nbsp;" + country.name+"</label>" +
+                        "</div>";
+        }
+        string_c += string + "</div></li>";
+
+        block.append(string_c);
+    }
+}
+
 function zeroCard(){
     $('#first_button').click(function () {
         var c = $('#page-' + page);
@@ -77,6 +115,7 @@ function remainingCards(){
 
 $(document).ready(function(){
     zeroCard();
+    // generate();
 
     $('.us_copy, .eu_copy').on("click", function(){
 
@@ -116,5 +155,44 @@ $(document).ready(function(){
                 removes.removeClass('hide');
             }
         });
+    });
+
+    $('#countries').modal({
+            dismissible: true, // Modal can be dismissed by clicking outside of the modal
+            opacity: .5, // Opacity of modal background
+            inDuration: 300, // Transition in duration
+            outDuration: 200, // Transition out duration
+            // startingTop: '4%', // Starting top style attribute
+            // endingTop: '10%', // Ending top style attribute
+            ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+
+            },
+            complete: function() { // Callback for Modal close
+
+            }
+        }
+    );
+    $('#cancel, #add').on('click', function (e) {
+        e.preventDefault();
+        $('#countries').modal('close');
+    });
+
+    $('.collapsible-header').on('click', function () {
+        var i = $(this).find('i');
+        if(i.hasClass('fa-arrow-down')){
+            i.removeClass('fa-arrow-down').addClass('fa-arrow-up');
+        }else{
+            i.removeClass('fa-arrow-up').addClass('fa-arrow-down');
+        }
+    });
+
+    $('.continent-checkbox').on('change', function () {
+        $(this).parent().parent().find('.country-checkbox').prop('checked', this.checked);
+    });
+
+    $('.collapsible').collapsible({
+        accordion: false, // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+        onOpen: function(el) { console.log('Open'); }, // Callback for Collapsible open
+        onClose: function(el) { console.log('Closed'); } // Callback for Collapsible close
     });
 });

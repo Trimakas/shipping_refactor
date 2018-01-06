@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 </head>
-<body class="">
+<body>
 
 <div class="top-pad">
     <div class="row">
@@ -121,7 +121,7 @@
                         <div class="col s12 m8 l5 offset-m2 offset-l1 top-10-marg">
                             <div class="row">
                                 <div class="col s12">
-                                    <button class="waves-effect btn stroke-btn tap add-countries-button">Add countries to this marketplace</button>
+                                    <a class="waves-effect btn stroke-btn tap add-countries-button modal-trigger" href="#countries">Add countries to this marketplace</a>
                                 </div>
                             </div>
                         </div>
@@ -137,7 +137,7 @@
                                 </span>
                             </button>
                         </div>
-                        <div class="col s12 m10">
+                        <div class="col s6 m10 offset-s3">
                             <p class="top-marg">Add additional Amazon accounts</p>
                         </div>
                     </div>
@@ -332,5 +332,335 @@
         </div>
     </div> <!-- end of main row -->
 </div> <!-- end of container -->
+
+<!-- Modal Structure -->
+<div id="countries" class="modal">
+    <div class="modal-content">
+        <div class="row zero-margin">
+            <div class="col s12 top-marg">
+                <h5>Add countries</h5>
+                <div class="row top-marg">
+                    <div class="col s4 m3 l2 zero-padding">
+                        <button class="purple_icon center-align shadowed">
+                            <span>
+                                <i class="fa fa-search fa-fw"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="col s8 m9 l10 zero-padding">
+                        <input type="text" name="search" class="search input shadowed" value="" placeholder="Search countries">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row continents">
+            <ul class="collapsible" data-collapsible="expandable">
+                <li class="col s12 continent None">
+                    <div class="col s10 m11 continent-label"> <input class="continent-checkbox" type="checkbox" id="None"> <label for="None">None</label> </div>
+                    <div class="col s12 collapsible-body"></div>
+                </li>
+                <li class="col s12 continent Africa">
+                    <div class="col s10 m11 continent-label"> <input class="continent-checkbox" type="checkbox" id="Africa"> <label for="Africa">Africa</label> </div>
+                    <div class="col s1 m1 collapsible-header"> <span><i class="fa fa-lg fa-arrow-down"></i></span> </div>
+                    <div class="col s12 collapsible-body" style="display: none;">
+                        <div class="col s11 offset-s1 country angola"><input class="country-checkbox" type="checkbox" id="angola"><label for="angola">🇦🇴&nbsp;&nbsp;&nbsp;&nbsp;Angola</label></div>
+                        <div class="col s11 offset-s1 country burkina-faso"><input class="country-checkbox" type="checkbox" id="burkina-faso"><label for="burkina-faso">🇧🇫&nbsp;&nbsp;&nbsp;&nbsp;Burkina Faso</label></div>
+                        <div class="col s11 offset-s1 country burundi"><input class="country-checkbox" type="checkbox" id="burundi"><label for="burundi">🇧🇮&nbsp;&nbsp;&nbsp;&nbsp;Burundi</label></div>
+                        <div class="col s11 offset-s1 country benin"><input class="country-checkbox" type="checkbox" id="benin"><label for="benin">🇧🇯&nbsp;&nbsp;&nbsp;&nbsp;Benin</label></div>
+                        <div class="col s11 offset-s1 country botswana"><input class="country-checkbox" type="checkbox" id="botswana"><label for="botswana">🇧🇼&nbsp;&nbsp;&nbsp;&nbsp;Botswana</label></div>
+                        <div class="col s11 offset-s1 country democratic-republic of the congo"><input class="country-checkbox" type="checkbox" id="democratic-republic of the congo"><label for="democratic-republic of the congo">🇨🇩&nbsp;&nbsp;&nbsp;&nbsp;Democratic Republic of the Congo</label></div>
+                        <div class="col s11 offset-s1 country central-african republic"><input class="country-checkbox" type="checkbox" id="central-african republic"><label for="central-african republic">🇨🇫&nbsp;&nbsp;&nbsp;&nbsp;Central African Republic</label></div>
+                        <div class="col s11 offset-s1 country republic-of the congo"><input class="country-checkbox" type="checkbox" id="republic-of the congo"><label for="republic-of the congo">🇨🇬&nbsp;&nbsp;&nbsp;&nbsp;Republic of the Congo</label></div>
+                        <div class="col s11 offset-s1 country ivory-coast"><input class="country-checkbox" type="checkbox" id="ivory-coast"><label for="ivory-coast">🇨🇮&nbsp;&nbsp;&nbsp;&nbsp;Ivory Coast</label></div>
+                        <div class="col s11 offset-s1 country cameroon"><input class="country-checkbox" type="checkbox" id="cameroon"><label for="cameroon">🇨🇲&nbsp;&nbsp;&nbsp;&nbsp;Cameroon</label></div>
+                        <div class="col s11 offset-s1 country cape-verde"><input class="country-checkbox" type="checkbox" id="cape-verde"><label for="cape-verde">🇨🇻&nbsp;&nbsp;&nbsp;&nbsp;Cape Verde</label></div>
+                        <div class="col s11 offset-s1 country djibouti"><input class="country-checkbox" type="checkbox" id="djibouti"><label for="djibouti">🇩🇯&nbsp;&nbsp;&nbsp;&nbsp;Djibouti</label></div>
+                        <div class="col s11 offset-s1 country algeria"><input class="country-checkbox" type="checkbox" id="algeria"><label for="algeria">🇩🇿&nbsp;&nbsp;&nbsp;&nbsp;Algeria</label></div>
+                        <div class="col s11 offset-s1 country egypt"><input class="country-checkbox" type="checkbox" id="egypt"><label for="egypt">🇪🇬&nbsp;&nbsp;&nbsp;&nbsp;Egypt</label></div>
+                        <div class="col s11 offset-s1 country western-sahara"><input class="country-checkbox" type="checkbox" id="western-sahara"><label for="western-sahara">🇪🇭&nbsp;&nbsp;&nbsp;&nbsp;Western Sahara</label></div>
+                        <div class="col s11 offset-s1 country eritrea"><input class="country-checkbox" type="checkbox" id="eritrea"><label for="eritrea">🇪🇷&nbsp;&nbsp;&nbsp;&nbsp;Eritrea</label></div>
+                        <div class="col s11 offset-s1 country ethiopia"><input class="country-checkbox" type="checkbox" id="ethiopia"><label for="ethiopia">🇪🇹&nbsp;&nbsp;&nbsp;&nbsp;Ethiopia</label></div>
+                        <div class="col s11 offset-s1 country gabon"><input class="country-checkbox" type="checkbox" id="gabon"><label for="gabon">🇬🇦&nbsp;&nbsp;&nbsp;&nbsp;Gabon</label></div>
+                        <div class="col s11 offset-s1 country ghana"><input class="country-checkbox" type="checkbox" id="ghana"><label for="ghana">🇬🇭&nbsp;&nbsp;&nbsp;&nbsp;Ghana</label></div>
+                        <div class="col s11 offset-s1 country gambia"><input class="country-checkbox" type="checkbox" id="gambia"><label for="gambia">🇬🇲&nbsp;&nbsp;&nbsp;&nbsp;Gambia</label></div>
+                        <div class="col s11 offset-s1 country guinea"><input class="country-checkbox" type="checkbox" id="guinea"><label for="guinea">🇬🇳&nbsp;&nbsp;&nbsp;&nbsp;Guinea</label></div>
+                        <div class="col s11 offset-s1 country equatorial-guinea"><input class="country-checkbox" type="checkbox" id="equatorial-guinea"><label for="equatorial-guinea">🇬🇶&nbsp;&nbsp;&nbsp;&nbsp;Equatorial Guinea</label></div>
+                        <div class="col s11 offset-s1 country guinea-bissau"><input class="country-checkbox" type="checkbox" id="guinea-bissau"><label for="guinea-bissau">🇬🇼&nbsp;&nbsp;&nbsp;&nbsp;Guinea-Bissau</label></div>
+                        <div class="col s11 offset-s1 country kenya"><input class="country-checkbox" type="checkbox" id="kenya"><label for="kenya">🇰🇪&nbsp;&nbsp;&nbsp;&nbsp;Kenya</label></div>
+                        <div class="col s11 offset-s1 country comoros"><input class="country-checkbox" type="checkbox" id="comoros"><label for="comoros">🇰🇲&nbsp;&nbsp;&nbsp;&nbsp;Comoros</label></div>
+                        <div class="col s11 offset-s1 country liberia"><input class="country-checkbox" type="checkbox" id="liberia"><label for="liberia">🇱🇷&nbsp;&nbsp;&nbsp;&nbsp;Liberia</label></div>
+                        <div class="col s11 offset-s1 country lesotho"><input class="country-checkbox" type="checkbox" id="lesotho"><label for="lesotho">🇱🇸&nbsp;&nbsp;&nbsp;&nbsp;Lesotho</label></div>
+                        <div class="col s11 offset-s1 country libya"><input class="country-checkbox" type="checkbox" id="libya"><label for="libya">🇱🇾&nbsp;&nbsp;&nbsp;&nbsp;Libya</label></div>
+                        <div class="col s11 offset-s1 country morocco"><input class="country-checkbox" type="checkbox" id="morocco"><label for="morocco">🇲🇦&nbsp;&nbsp;&nbsp;&nbsp;Morocco</label></div>
+                        <div class="col s11 offset-s1 country madagascar"><input class="country-checkbox" type="checkbox" id="madagascar"><label for="madagascar">🇲🇬&nbsp;&nbsp;&nbsp;&nbsp;Madagascar</label></div>
+                        <div class="col s11 offset-s1 country mali"><input class="country-checkbox" type="checkbox" id="mali"><label for="mali">🇲🇱&nbsp;&nbsp;&nbsp;&nbsp;Mali</label></div>
+                        <div class="col s11 offset-s1 country mauritania"><input class="country-checkbox" type="checkbox" id="mauritania"><label for="mauritania">🇲🇷&nbsp;&nbsp;&nbsp;&nbsp;Mauritania</label></div>
+                        <div class="col s11 offset-s1 country mauritius"><input class="country-checkbox" type="checkbox" id="mauritius"><label for="mauritius">🇲🇺&nbsp;&nbsp;&nbsp;&nbsp;Mauritius</label></div>
+                        <div class="col s11 offset-s1 country malawi"><input class="country-checkbox" type="checkbox" id="malawi"><label for="malawi">🇲🇼&nbsp;&nbsp;&nbsp;&nbsp;Malawi</label></div>
+                        <div class="col s11 offset-s1 country mozambique"><input class="country-checkbox" type="checkbox" id="mozambique"><label for="mozambique">🇲🇿&nbsp;&nbsp;&nbsp;&nbsp;Mozambique</label></div>
+                        <div class="col s11 offset-s1 country namibia"><input class="country-checkbox" type="checkbox" id="namibia"><label for="namibia">🇳🇦&nbsp;&nbsp;&nbsp;&nbsp;Namibia</label></div>
+                        <div class="col s11 offset-s1 country niger"><input class="country-checkbox" type="checkbox" id="niger"><label for="niger">🇳🇪&nbsp;&nbsp;&nbsp;&nbsp;Niger</label></div>
+                        <div class="col s11 offset-s1 country nigeria"><input class="country-checkbox" type="checkbox" id="nigeria"><label for="nigeria">🇳🇬&nbsp;&nbsp;&nbsp;&nbsp;Nigeria</label></div>
+                        <div class="col s11 offset-s1 country réunion"><input class="country-checkbox" type="checkbox" id="réunion"><label for="réunion">🇷🇪&nbsp;&nbsp;&nbsp;&nbsp;Réunion</label></div>
+                        <div class="col s11 offset-s1 country rwanda"><input class="country-checkbox" type="checkbox" id="rwanda"><label for="rwanda">🇷🇼&nbsp;&nbsp;&nbsp;&nbsp;Rwanda</label></div>
+                        <div class="col s11 offset-s1 country seychelles"><input class="country-checkbox" type="checkbox" id="seychelles"><label for="seychelles">🇸🇨&nbsp;&nbsp;&nbsp;&nbsp;Seychelles</label></div>
+                        <div class="col s11 offset-s1 country sudan"><input class="country-checkbox" type="checkbox" id="sudan"><label for="sudan">🇸🇩&nbsp;&nbsp;&nbsp;&nbsp;Sudan</label></div>
+                        <div class="col s11 offset-s1 country saint-helena"><input class="country-checkbox" type="checkbox" id="saint-helena"><label for="saint-helena">🇸🇭&nbsp;&nbsp;&nbsp;&nbsp;Saint Helena</label></div>
+                        <div class="col s11 offset-s1 country sierra-leone"><input class="country-checkbox" type="checkbox" id="sierra-leone"><label for="sierra-leone">🇸🇱&nbsp;&nbsp;&nbsp;&nbsp;Sierra Leone</label></div>
+                        <div class="col s11 offset-s1 country senegal"><input class="country-checkbox" type="checkbox" id="senegal"><label for="senegal">🇸🇳&nbsp;&nbsp;&nbsp;&nbsp;Senegal</label></div>
+                        <div class="col s11 offset-s1 country somalia"><input class="country-checkbox" type="checkbox" id="somalia"><label for="somalia">🇸🇴&nbsp;&nbsp;&nbsp;&nbsp;Somalia</label></div>
+                        <div class="col s11 offset-s1 country south-sudan"><input class="country-checkbox" type="checkbox" id="south-sudan"><label for="south-sudan">🇸🇸&nbsp;&nbsp;&nbsp;&nbsp;South Sudan</label></div>
+                        <div class="col s11 offset-s1 country são-tomé and príncipe"><input class="country-checkbox" type="checkbox" id="são-tomé and príncipe"><label for="são-tomé and príncipe">🇸🇹&nbsp;&nbsp;&nbsp;&nbsp;São Tomé and Príncipe</label></div>
+                        <div class="col s11 offset-s1 country swaziland"><input class="country-checkbox" type="checkbox" id="swaziland"><label for="swaziland">🇸🇿&nbsp;&nbsp;&nbsp;&nbsp;Swaziland</label></div>
+                        <div class="col s11 offset-s1 country chad"><input class="country-checkbox" type="checkbox" id="chad"><label for="chad">🇹🇩&nbsp;&nbsp;&nbsp;&nbsp;Chad</label></div>
+                        <div class="col s11 offset-s1 country togo"><input class="country-checkbox" type="checkbox" id="togo"><label for="togo">🇹🇬&nbsp;&nbsp;&nbsp;&nbsp;Togo</label></div>
+                        <div class="col s11 offset-s1 country tunisia"><input class="country-checkbox" type="checkbox" id="tunisia"><label for="tunisia">🇹🇳&nbsp;&nbsp;&nbsp;&nbsp;Tunisia</label></div>
+                        <div class="col s11 offset-s1 country tanzania"><input class="country-checkbox" type="checkbox" id="tanzania"><label for="tanzania">🇹🇿&nbsp;&nbsp;&nbsp;&nbsp;Tanzania</label></div>
+                        <div class="col s11 offset-s1 country uganda"><input class="country-checkbox" type="checkbox" id="uganda"><label for="uganda">🇺🇬&nbsp;&nbsp;&nbsp;&nbsp;Uganda</label></div>
+                        <div class="col s11 offset-s1 country mayotte"><input class="country-checkbox" type="checkbox" id="mayotte"><label for="mayotte">🇾🇹&nbsp;&nbsp;&nbsp;&nbsp;Mayotte</label></div>
+                        <div class="col s11 offset-s1 country south-africa"><input class="country-checkbox" type="checkbox" id="south-africa"><label for="south-africa">🇿🇦&nbsp;&nbsp;&nbsp;&nbsp;South Africa</label></div>
+                        <div class="col s11 offset-s1 country zambia"><input class="country-checkbox" type="checkbox" id="zambia"><label for="zambia">🇿🇲&nbsp;&nbsp;&nbsp;&nbsp;Zambia</label></div>
+                        <div class="col s11 offset-s1 country zimbabwe"><input class="country-checkbox" type="checkbox" id="zimbabwe"><label for="zimbabwe">🇿🇼&nbsp;&nbsp;&nbsp;&nbsp;Zimbabwe</label></div>
+                    </div>
+                </li>
+                <li class="col s12 continent Antarctica">
+                    <div class="col s10 m11 continent-label"> <input class="continent-checkbox" type="checkbox" id="Antarctica"> <label for="Antarctica">Antarctica</label> </div>
+                    <div class="col s1 m1 collapsible-header"> <span><i class="fa fa-arrow-down fa-lg"></i></span> </div>
+                    <div class="col s12 collapsible-body">
+                        <div class="col s11 offset-s1 country antarctica"><input class="country-checkbox" type="checkbox" id="antarctica"><label for="antarctica">🇦🇶&nbsp;&nbsp;&nbsp;&nbsp;Antarctica</label></div>
+                        <div class="col s11 offset-s1 country bouvet-island"><input class="country-checkbox" type="checkbox" id="bouvet-island"><label for="bouvet-island">🇧🇻&nbsp;&nbsp;&nbsp;&nbsp;Bouvet Island</label></div>
+                        <div class="col s11 offset-s1 country south-georgia and the south sandwich islands"><input class="country-checkbox" type="checkbox" id="south-georgia and the south sandwich islands"><label for="south-georgia and the south sandwich islands">🇬🇸&nbsp;&nbsp;&nbsp;&nbsp;South Georgia and the South Sandwich Islands</label></div>
+                        <div
+                        class="col s11 offset-s1 country heard-island and mcdonald islands"><input class="country-checkbox" type="checkbox" id="heard-island and mcdonald islands"><label for="heard-island and mcdonald islands">🇭🇲&nbsp;&nbsp;&nbsp;&nbsp;Heard Island and McDonald Islands</label></div>
+                        <div class="col s11 offset-s1 country french-southern territories"><input class="country-checkbox" type="checkbox" id="french-southern territories"><label for="french-southern territories">🇹🇫&nbsp;&nbsp;&nbsp;&nbsp;French Southern Territories</label></div>
+                    </div>
+                </li>
+                <li class="col s12 continent Asia">
+                    <div class="col s10 m11 continent-label"> <input class="continent-checkbox" type="checkbox" id="Asia"> <label for="Asia">Asia</label> </div>
+                    <div class="col s1 m1 collapsible-header"> <span><i class="fa fa-arrow-down fa-lg"></i></span> </div>
+                    <div class="col s12 collapsible-body">
+                        <div class="col s11 offset-s1 country united-arab emirates"><input class="country-checkbox" type="checkbox" id="united-arab emirates"><label for="united-arab emirates">🇦🇪&nbsp;&nbsp;&nbsp;&nbsp;United Arab Emirates</label></div>
+                        <div class="col s11 offset-s1 country afghanistan"><input class="country-checkbox" type="checkbox" id="afghanistan"><label for="afghanistan">🇦🇫&nbsp;&nbsp;&nbsp;&nbsp;Afghanistan</label></div>
+                        <div class="col s11 offset-s1 country armenia"><input class="country-checkbox" type="checkbox" id="armenia"><label for="armenia">🇦🇲&nbsp;&nbsp;&nbsp;&nbsp;Armenia</label></div>
+                        <div class="col s11 offset-s1 country azerbaijan"><input class="country-checkbox" type="checkbox" id="azerbaijan"><label for="azerbaijan">🇦🇿&nbsp;&nbsp;&nbsp;&nbsp;Azerbaijan</label></div>
+                        <div class="col s11 offset-s1 country bangladesh"><input class="country-checkbox" type="checkbox" id="bangladesh"><label for="bangladesh">🇧🇩&nbsp;&nbsp;&nbsp;&nbsp;Bangladesh</label></div>
+                        <div class="col s11 offset-s1 country bahrain"><input class="country-checkbox" type="checkbox" id="bahrain"><label for="bahrain">🇧🇭&nbsp;&nbsp;&nbsp;&nbsp;Bahrain</label></div>
+                        <div class="col s11 offset-s1 country brunei"><input class="country-checkbox" type="checkbox" id="brunei"><label for="brunei">🇧🇳&nbsp;&nbsp;&nbsp;&nbsp;Brunei</label></div>
+                        <div class="col s11 offset-s1 country bhutan"><input class="country-checkbox" type="checkbox" id="bhutan"><label for="bhutan">🇧🇹&nbsp;&nbsp;&nbsp;&nbsp;Bhutan</label></div>
+                        <div class="col s11 offset-s1 country cocos-[keeling] islands"><input class="country-checkbox" type="checkbox" id="cocos-[keeling] islands"><label for="cocos-[keeling] islands">🇨🇨&nbsp;&nbsp;&nbsp;&nbsp;Cocos [Keeling] Islands</label></div>
+                        <div class="col s11 offset-s1 country china"><input class="country-checkbox" type="checkbox" id="china"><label for="china">🇨🇳&nbsp;&nbsp;&nbsp;&nbsp;China</label></div>
+                        <div class="col s11 offset-s1 country christmas-island"><input class="country-checkbox" type="checkbox" id="christmas-island"><label for="christmas-island">🇨🇽&nbsp;&nbsp;&nbsp;&nbsp;Christmas Island</label></div>
+                        <div class="col s11 offset-s1 country georgia"><input class="country-checkbox" type="checkbox" id="georgia"><label for="georgia">🇬🇪&nbsp;&nbsp;&nbsp;&nbsp;Georgia</label></div>
+                        <div class="col s11 offset-s1 country hong-kong"><input class="country-checkbox" type="checkbox" id="hong-kong"><label for="hong-kong">🇭🇰&nbsp;&nbsp;&nbsp;&nbsp;Hong Kong</label></div>
+                        <div class="col s11 offset-s1 country indonesia"><input class="country-checkbox" type="checkbox" id="indonesia"><label for="indonesia">🇮🇩&nbsp;&nbsp;&nbsp;&nbsp;Indonesia</label></div>
+                        <div class="col s11 offset-s1 country israel"><input class="country-checkbox" type="checkbox" id="israel"><label for="israel">🇮🇱&nbsp;&nbsp;&nbsp;&nbsp;Israel</label></div>
+                        <div class="col s11 offset-s1 country india"><input class="country-checkbox" type="checkbox" id="india"><label for="india">🇮🇳&nbsp;&nbsp;&nbsp;&nbsp;India</label></div>
+                        <div class="col s11 offset-s1 country british-indian ocean territory"><input class="country-checkbox" type="checkbox" id="british-indian ocean territory"><label for="british-indian ocean territory">🇮🇴&nbsp;&nbsp;&nbsp;&nbsp;British Indian Ocean Territory</label></div>
+                        <div class="col s11 offset-s1 country iraq"><input class="country-checkbox" type="checkbox" id="iraq"><label for="iraq">🇮🇶&nbsp;&nbsp;&nbsp;&nbsp;Iraq</label></div>
+                        <div class="col s11 offset-s1 country iran"><input class="country-checkbox" type="checkbox" id="iran"><label for="iran">🇮🇷&nbsp;&nbsp;&nbsp;&nbsp;Iran</label></div>
+                        <div class="col s11 offset-s1 country jordan"><input class="country-checkbox" type="checkbox" id="jordan"><label for="jordan">🇯🇴&nbsp;&nbsp;&nbsp;&nbsp;Jordan</label></div>
+                        <div class="col s11 offset-s1 country japan"><input class="country-checkbox" type="checkbox" id="japan"><label for="japan">🇯🇵&nbsp;&nbsp;&nbsp;&nbsp;Japan</label></div>
+                        <div class="col s11 offset-s1 country kyrgyzstan"><input class="country-checkbox" type="checkbox" id="kyrgyzstan"><label for="kyrgyzstan">🇰🇬&nbsp;&nbsp;&nbsp;&nbsp;Kyrgyzstan</label></div>
+                        <div class="col s11 offset-s1 country cambodia"><input class="country-checkbox" type="checkbox" id="cambodia"><label for="cambodia">🇰🇭&nbsp;&nbsp;&nbsp;&nbsp;Cambodia</label></div>
+                        <div class="col s11 offset-s1 country north-korea"><input class="country-checkbox" type="checkbox" id="north-korea"><label for="north-korea">🇰🇵&nbsp;&nbsp;&nbsp;&nbsp;North Korea</label></div>
+                        <div class="col s11 offset-s1 country south-korea"><input class="country-checkbox" type="checkbox" id="south-korea"><label for="south-korea">🇰🇷&nbsp;&nbsp;&nbsp;&nbsp;South Korea</label></div>
+                        <div class="col s11 offset-s1 country kuwait"><input class="country-checkbox" type="checkbox" id="kuwait"><label for="kuwait">🇰🇼&nbsp;&nbsp;&nbsp;&nbsp;Kuwait</label></div>
+                        <div class="col s11 offset-s1 country kazakhstan"><input class="country-checkbox" type="checkbox" id="kazakhstan"><label for="kazakhstan">🇰🇿&nbsp;&nbsp;&nbsp;&nbsp;Kazakhstan</label></div>
+                        <div class="col s11 offset-s1 country laos"><input class="country-checkbox" type="checkbox" id="laos"><label for="laos">🇱🇦&nbsp;&nbsp;&nbsp;&nbsp;Laos</label></div>
+                        <div class="col s11 offset-s1 country lebanon"><input class="country-checkbox" type="checkbox" id="lebanon"><label for="lebanon">🇱🇧&nbsp;&nbsp;&nbsp;&nbsp;Lebanon</label></div>
+                        <div class="col s11 offset-s1 country sri-lanka"><input class="country-checkbox" type="checkbox" id="sri-lanka"><label for="sri-lanka">🇱🇰&nbsp;&nbsp;&nbsp;&nbsp;Sri Lanka</label></div>
+                        <div class="col s11 offset-s1 country myanmar-[burma]"><input class="country-checkbox" type="checkbox" id="myanmar-[burma]"><label for="myanmar-[burma]">🇲🇲&nbsp;&nbsp;&nbsp;&nbsp;Myanmar [Burma]</label></div>
+                        <div class="col s11 offset-s1 country mongolia"><input class="country-checkbox" type="checkbox" id="mongolia"><label for="mongolia">🇲🇳&nbsp;&nbsp;&nbsp;&nbsp;Mongolia</label></div>
+                        <div class="col s11 offset-s1 country macao"><input class="country-checkbox" type="checkbox" id="macao"><label for="macao">🇲🇴&nbsp;&nbsp;&nbsp;&nbsp;Macao</label></div>
+                        <div class="col s11 offset-s1 country maldives"><input class="country-checkbox" type="checkbox" id="maldives"><label for="maldives">🇲🇻&nbsp;&nbsp;&nbsp;&nbsp;Maldives</label></div>
+                        <div class="col s11 offset-s1 country malaysia"><input class="country-checkbox" type="checkbox" id="malaysia"><label for="malaysia">🇲🇾&nbsp;&nbsp;&nbsp;&nbsp;Malaysia</label></div>
+                        <div class="col s11 offset-s1 country nepal"><input class="country-checkbox" type="checkbox" id="nepal"><label for="nepal">🇳🇵&nbsp;&nbsp;&nbsp;&nbsp;Nepal</label></div>
+                        <div class="col s11 offset-s1 country oman"><input class="country-checkbox" type="checkbox" id="oman"><label for="oman">🇴🇲&nbsp;&nbsp;&nbsp;&nbsp;Oman</label></div>
+                        <div class="col s11 offset-s1 country philippines"><input class="country-checkbox" type="checkbox" id="philippines"><label for="philippines">🇵🇭&nbsp;&nbsp;&nbsp;&nbsp;Philippines</label></div>
+                        <div class="col s11 offset-s1 country pakistan"><input class="country-checkbox" type="checkbox" id="pakistan"><label for="pakistan">🇵🇰&nbsp;&nbsp;&nbsp;&nbsp;Pakistan</label></div>
+                        <div class="col s11 offset-s1 country palestine"><input class="country-checkbox" type="checkbox" id="palestine"><label for="palestine">🇵🇸&nbsp;&nbsp;&nbsp;&nbsp;Palestine</label></div>
+                        <div class="col s11 offset-s1 country qatar"><input class="country-checkbox" type="checkbox" id="qatar"><label for="qatar">🇶🇦&nbsp;&nbsp;&nbsp;&nbsp;Qatar</label></div>
+                        <div class="col s11 offset-s1 country saudi-arabia"><input class="country-checkbox" type="checkbox" id="saudi-arabia"><label for="saudi-arabia">🇸🇦&nbsp;&nbsp;&nbsp;&nbsp;Saudi Arabia</label></div>
+                        <div class="col s11 offset-s1 country singapore"><input class="country-checkbox" type="checkbox" id="singapore"><label for="singapore">🇸🇬&nbsp;&nbsp;&nbsp;&nbsp;Singapore</label></div>
+                        <div class="col s11 offset-s1 country syria"><input class="country-checkbox" type="checkbox" id="syria"><label for="syria">🇸🇾&nbsp;&nbsp;&nbsp;&nbsp;Syria</label></div>
+                        <div class="col s11 offset-s1 country thailand"><input class="country-checkbox" type="checkbox" id="thailand"><label for="thailand">🇹🇭&nbsp;&nbsp;&nbsp;&nbsp;Thailand</label></div>
+                        <div class="col s11 offset-s1 country tajikistan"><input class="country-checkbox" type="checkbox" id="tajikistan"><label for="tajikistan">🇹🇯&nbsp;&nbsp;&nbsp;&nbsp;Tajikistan</label></div>
+                        <div class="col s11 offset-s1 country turkmenistan"><input class="country-checkbox" type="checkbox" id="turkmenistan"><label for="turkmenistan">🇹🇲&nbsp;&nbsp;&nbsp;&nbsp;Turkmenistan</label></div>
+                        <div class="col s11 offset-s1 country turkey"><input class="country-checkbox" type="checkbox" id="turkey"><label for="turkey">🇹🇷&nbsp;&nbsp;&nbsp;&nbsp;Turkey</label></div>
+                        <div class="col s11 offset-s1 country taiwan"><input class="country-checkbox" type="checkbox" id="taiwan"><label for="taiwan">🇹🇼&nbsp;&nbsp;&nbsp;&nbsp;Taiwan</label></div>
+                        <div class="col s11 offset-s1 country uzbekistan"><input class="country-checkbox" type="checkbox" id="uzbekistan"><label for="uzbekistan">🇺🇿&nbsp;&nbsp;&nbsp;&nbsp;Uzbekistan</label></div>
+                        <div class="col s11 offset-s1 country vietnam"><input class="country-checkbox" type="checkbox" id="vietnam"><label for="vietnam">🇻🇳&nbsp;&nbsp;&nbsp;&nbsp;Vietnam</label></div>
+                        <div class="col s11 offset-s1 country yemen"><input class="country-checkbox" type="checkbox" id="yemen"><label for="yemen">🇾🇪&nbsp;&nbsp;&nbsp;&nbsp;Yemen</label></div>
+                    </div>
+                </li>
+                <li class="col s12 continent Europe">
+                    <div class="col s10 m11 continent-label"> <input class="continent-checkbox" type="checkbox" id="Europe"> <label for="Europe">Europe</label> </div>
+                    <div class="col s1 m1 collapsible-header"> <span><i class="fa fa-arrow-down fa-lg"></i></span> </div>
+                    <div class="col s12 collapsible-body">
+                        <div class="col s11 offset-s1 country andorra"><input class="country-checkbox" type="checkbox" id="andorra"><label for="andorra">🇦🇩&nbsp;&nbsp;&nbsp;&nbsp;Andorra</label></div>
+                        <div class="col s11 offset-s1 country albania"><input class="country-checkbox" type="checkbox" id="albania"><label for="albania">🇦🇱&nbsp;&nbsp;&nbsp;&nbsp;Albania</label></div>
+                        <div class="col s11 offset-s1 country austria"><input class="country-checkbox" type="checkbox" id="austria"><label for="austria">🇦🇹&nbsp;&nbsp;&nbsp;&nbsp;Austria</label></div>
+                        <div class="col s11 offset-s1 country åland"><input class="country-checkbox" type="checkbox" id="åland"><label for="åland">🇦🇽&nbsp;&nbsp;&nbsp;&nbsp;Åland</label></div>
+                        <div class="col s11 offset-s1 country bosnia-and herzegovina"><input class="country-checkbox" type="checkbox" id="bosnia-and herzegovina"><label for="bosnia-and herzegovina">🇧🇦&nbsp;&nbsp;&nbsp;&nbsp;Bosnia and Herzegovina</label></div>
+                        <div class="col s11 offset-s1 country belgium"><input class="country-checkbox" type="checkbox" id="belgium"><label for="belgium">🇧🇪&nbsp;&nbsp;&nbsp;&nbsp;Belgium</label></div>
+                        <div class="col s11 offset-s1 country bulgaria"><input class="country-checkbox" type="checkbox" id="bulgaria"><label for="bulgaria">🇧🇬&nbsp;&nbsp;&nbsp;&nbsp;Bulgaria</label></div>
+                        <div class="col s11 offset-s1 country belarus"><input class="country-checkbox" type="checkbox" id="belarus"><label for="belarus">🇧🇾&nbsp;&nbsp;&nbsp;&nbsp;Belarus</label></div>
+                        <div class="col s11 offset-s1 country switzerland"><input class="country-checkbox" type="checkbox" id="switzerland"><label for="switzerland">🇨🇭&nbsp;&nbsp;&nbsp;&nbsp;Switzerland</label></div>
+                        <div class="col s11 offset-s1 country cyprus"><input class="country-checkbox" type="checkbox" id="cyprus"><label for="cyprus">🇨🇾&nbsp;&nbsp;&nbsp;&nbsp;Cyprus</label></div>
+                        <div class="col s11 offset-s1 country czech-republic"><input class="country-checkbox" type="checkbox" id="czech-republic"><label for="czech-republic">🇨🇿&nbsp;&nbsp;&nbsp;&nbsp;Czech Republic</label></div>
+                        <div class="col s11 offset-s1 country germany"><input class="country-checkbox" type="checkbox" id="germany"><label for="germany">🇩🇪&nbsp;&nbsp;&nbsp;&nbsp;Germany</label></div>
+                        <div class="col s11 offset-s1 country denmark"><input class="country-checkbox" type="checkbox" id="denmark"><label for="denmark">🇩🇰&nbsp;&nbsp;&nbsp;&nbsp;Denmark</label></div>
+                        <div class="col s11 offset-s1 country estonia"><input class="country-checkbox" type="checkbox" id="estonia"><label for="estonia">🇪🇪&nbsp;&nbsp;&nbsp;&nbsp;Estonia</label></div>
+                        <div class="col s11 offset-s1 country spain"><input class="country-checkbox" type="checkbox" id="spain"><label for="spain">🇪🇸&nbsp;&nbsp;&nbsp;&nbsp;Spain</label></div>
+                        <div class="col s11 offset-s1 country finland"><input class="country-checkbox" type="checkbox" id="finland"><label for="finland">🇫🇮&nbsp;&nbsp;&nbsp;&nbsp;Finland</label></div>
+                        <div class="col s11 offset-s1 country faroe-islands"><input class="country-checkbox" type="checkbox" id="faroe-islands"><label for="faroe-islands">🇫🇴&nbsp;&nbsp;&nbsp;&nbsp;Faroe Islands</label></div>
+                        <div class="col s11 offset-s1 country france"><input class="country-checkbox" type="checkbox" id="france"><label for="france">🇫🇷&nbsp;&nbsp;&nbsp;&nbsp;France</label></div>
+                        <div class="col s11 offset-s1 country united-kingdom"><input class="country-checkbox" type="checkbox" id="united-kingdom"><label for="united-kingdom">🇬🇧&nbsp;&nbsp;&nbsp;&nbsp;United Kingdom</label></div>
+                        <div class="col s11 offset-s1 country guernsey"><input class="country-checkbox" type="checkbox" id="guernsey"><label for="guernsey">🇬🇬&nbsp;&nbsp;&nbsp;&nbsp;Guernsey</label></div>
+                        <div class="col s11 offset-s1 country gibraltar"><input class="country-checkbox" type="checkbox" id="gibraltar"><label for="gibraltar">🇬🇮&nbsp;&nbsp;&nbsp;&nbsp;Gibraltar</label></div>
+                        <div class="col s11 offset-s1 country greece"><input class="country-checkbox" type="checkbox" id="greece"><label for="greece">🇬🇷&nbsp;&nbsp;&nbsp;&nbsp;Greece</label></div>
+                        <div class="col s11 offset-s1 country croatia"><input class="country-checkbox" type="checkbox" id="croatia"><label for="croatia">🇭🇷&nbsp;&nbsp;&nbsp;&nbsp;Croatia</label></div>
+                        <div class="col s11 offset-s1 country hungary"><input class="country-checkbox" type="checkbox" id="hungary"><label for="hungary">🇭🇺&nbsp;&nbsp;&nbsp;&nbsp;Hungary</label></div>
+                        <div class="col s11 offset-s1 country ireland"><input class="country-checkbox" type="checkbox" id="ireland"><label for="ireland">🇮🇪&nbsp;&nbsp;&nbsp;&nbsp;Ireland</label></div>
+                        <div class="col s11 offset-s1 country isle-of man"><input class="country-checkbox" type="checkbox" id="isle-of man"><label for="isle-of man">🇮🇲&nbsp;&nbsp;&nbsp;&nbsp;Isle of Man</label></div>
+                        <div class="col s11 offset-s1 country iceland"><input class="country-checkbox" type="checkbox" id="iceland"><label for="iceland">🇮🇸&nbsp;&nbsp;&nbsp;&nbsp;Iceland</label></div>
+                        <div class="col s11 offset-s1 country italy"><input class="country-checkbox" type="checkbox" id="italy"><label for="italy">🇮🇹&nbsp;&nbsp;&nbsp;&nbsp;Italy</label></div>
+                        <div class="col s11 offset-s1 country jersey"><input class="country-checkbox" type="checkbox" id="jersey"><label for="jersey">🇯🇪&nbsp;&nbsp;&nbsp;&nbsp;Jersey</label></div>
+                        <div class="col s11 offset-s1 country liechtenstein"><input class="country-checkbox" type="checkbox" id="liechtenstein"><label for="liechtenstein">🇱🇮&nbsp;&nbsp;&nbsp;&nbsp;Liechtenstein</label></div>
+                        <div class="col s11 offset-s1 country lithuania"><input class="country-checkbox" type="checkbox" id="lithuania"><label for="lithuania">🇱🇹&nbsp;&nbsp;&nbsp;&nbsp;Lithuania</label></div>
+                        <div class="col s11 offset-s1 country luxembourg"><input class="country-checkbox" type="checkbox" id="luxembourg"><label for="luxembourg">🇱🇺&nbsp;&nbsp;&nbsp;&nbsp;Luxembourg</label></div>
+                        <div class="col s11 offset-s1 country latvia"><input class="country-checkbox" type="checkbox" id="latvia"><label for="latvia">🇱🇻&nbsp;&nbsp;&nbsp;&nbsp;Latvia</label></div>
+                        <div class="col s11 offset-s1 country monaco"><input class="country-checkbox" type="checkbox" id="monaco"><label for="monaco">🇲🇨&nbsp;&nbsp;&nbsp;&nbsp;Monaco</label></div>
+                        <div class="col s11 offset-s1 country moldova"><input class="country-checkbox" type="checkbox" id="moldova"><label for="moldova">🇲🇩&nbsp;&nbsp;&nbsp;&nbsp;Moldova</label></div>
+                        <div class="col s11 offset-s1 country montenegro"><input class="country-checkbox" type="checkbox" id="montenegro"><label for="montenegro">🇲🇪&nbsp;&nbsp;&nbsp;&nbsp;Montenegro</label></div>
+                        <div class="col s11 offset-s1 country macedonia"><input class="country-checkbox" type="checkbox" id="macedonia"><label for="macedonia">🇲🇰&nbsp;&nbsp;&nbsp;&nbsp;Macedonia</label></div>
+                        <div class="col s11 offset-s1 country malta"><input class="country-checkbox" type="checkbox" id="malta"><label for="malta">🇲🇹&nbsp;&nbsp;&nbsp;&nbsp;Malta</label></div>
+                        <div class="col s11 offset-s1 country netherlands"><input class="country-checkbox" type="checkbox" id="netherlands"><label for="netherlands">🇳🇱&nbsp;&nbsp;&nbsp;&nbsp;Netherlands</label></div>
+                        <div class="col s11 offset-s1 country norway"><input class="country-checkbox" type="checkbox" id="norway"><label for="norway">🇳🇴&nbsp;&nbsp;&nbsp;&nbsp;Norway</label></div>
+                        <div class="col s11 offset-s1 country poland"><input class="country-checkbox" type="checkbox" id="poland"><label for="poland">🇵🇱&nbsp;&nbsp;&nbsp;&nbsp;Poland</label></div>
+                        <div class="col s11 offset-s1 country portugal"><input class="country-checkbox" type="checkbox" id="portugal"><label for="portugal">🇵🇹&nbsp;&nbsp;&nbsp;&nbsp;Portugal</label></div>
+                        <div class="col s11 offset-s1 country romania"><input class="country-checkbox" type="checkbox" id="romania"><label for="romania">🇷🇴&nbsp;&nbsp;&nbsp;&nbsp;Romania</label></div>
+                        <div class="col s11 offset-s1 country serbia"><input class="country-checkbox" type="checkbox" id="serbia"><label for="serbia">🇷🇸&nbsp;&nbsp;&nbsp;&nbsp;Serbia</label></div>
+                        <div class="col s11 offset-s1 country russia"><input class="country-checkbox" type="checkbox" id="russia"><label for="russia">🇷🇺&nbsp;&nbsp;&nbsp;&nbsp;Russia</label></div>
+                        <div class="col s11 offset-s1 country sweden"><input class="country-checkbox" type="checkbox" id="sweden"><label for="sweden">🇸🇪&nbsp;&nbsp;&nbsp;&nbsp;Sweden</label></div>
+                        <div class="col s11 offset-s1 country slovenia"><input class="country-checkbox" type="checkbox" id="slovenia"><label for="slovenia">🇸🇮&nbsp;&nbsp;&nbsp;&nbsp;Slovenia</label></div>
+                        <div class="col s11 offset-s1 country svalbard-and jan mayen"><input class="country-checkbox" type="checkbox" id="svalbard-and jan mayen"><label for="svalbard-and jan mayen">🇸🇯&nbsp;&nbsp;&nbsp;&nbsp;Svalbard and Jan Mayen</label></div>
+                        <div class="col s11 offset-s1 country slovakia"><input class="country-checkbox" type="checkbox" id="slovakia"><label for="slovakia">🇸🇰&nbsp;&nbsp;&nbsp;&nbsp;Slovakia</label></div>
+                        <div class="col s11 offset-s1 country san-marino"><input class="country-checkbox" type="checkbox" id="san-marino"><label for="san-marino">🇸🇲&nbsp;&nbsp;&nbsp;&nbsp;San Marino</label></div>
+                        <div class="col s11 offset-s1 country ukraine"><input class="country-checkbox" type="checkbox" id="ukraine"><label for="ukraine">🇺🇦&nbsp;&nbsp;&nbsp;&nbsp;Ukraine</label></div>
+                        <div class="col s11 offset-s1 country vatican-city"><input class="country-checkbox" type="checkbox" id="vatican-city"><label for="vatican-city">🇻🇦&nbsp;&nbsp;&nbsp;&nbsp;Vatican City</label></div>
+                        <div class="col s11 offset-s1 country kosovo"><input class="country-checkbox" type="checkbox" id="kosovo"><label for="kosovo">🇽🇰&nbsp;&nbsp;&nbsp;&nbsp;Kosovo</label></div>
+                    </div>
+                </li>
+                <li class="col s12 continent North America">
+                    <div class="col s10 m11 continent-label"> <input class="continent-checkbox" type="checkbox" id="North America"> <label for="North America">North America</label> </div>
+                    <div class="col s1 m1 collapsible-header"> <span><i class="fa fa-arrow-down fa-lg"></i></span> </div>
+                    <div class="col s12 collapsible-body">
+                        <div class="col s11 offset-s1 country antigua-and barbuda"><input class="country-checkbox" type="checkbox" id="antigua-and barbuda"><label for="antigua-and barbuda">🇦🇬&nbsp;&nbsp;&nbsp;&nbsp;Antigua and Barbuda</label></div>
+                        <div class="col s11 offset-s1 country anguilla"><input class="country-checkbox" type="checkbox" id="anguilla"><label for="anguilla">🇦🇮&nbsp;&nbsp;&nbsp;&nbsp;Anguilla</label></div>
+                        <div class="col s11 offset-s1 country aruba"><input class="country-checkbox" type="checkbox" id="aruba"><label for="aruba">🇦🇼&nbsp;&nbsp;&nbsp;&nbsp;Aruba</label></div>
+                        <div class="col s11 offset-s1 country barbados"><input class="country-checkbox" type="checkbox" id="barbados"><label for="barbados">🇧🇧&nbsp;&nbsp;&nbsp;&nbsp;Barbados</label></div>
+                        <div class="col s11 offset-s1 country saint-barthélemy"><input class="country-checkbox" type="checkbox" id="saint-barthélemy"><label for="saint-barthélemy">🇧🇱&nbsp;&nbsp;&nbsp;&nbsp;Saint Barthélemy</label></div>
+                        <div class="col s11 offset-s1 country bermuda"><input class="country-checkbox" type="checkbox" id="bermuda"><label for="bermuda">🇧🇲&nbsp;&nbsp;&nbsp;&nbsp;Bermuda</label></div>
+                        <div class="col s11 offset-s1 country bonaire"><input class="country-checkbox" type="checkbox" id="bonaire"><label for="bonaire">🇧🇶&nbsp;&nbsp;&nbsp;&nbsp;Bonaire</label></div>
+                        <div class="col s11 offset-s1 country bahamas"><input class="country-checkbox" type="checkbox" id="bahamas"><label for="bahamas">🇧🇸&nbsp;&nbsp;&nbsp;&nbsp;Bahamas</label></div>
+                        <div class="col s11 offset-s1 country belize"><input class="country-checkbox" type="checkbox" id="belize"><label for="belize">🇧🇿&nbsp;&nbsp;&nbsp;&nbsp;Belize</label></div>
+                        <div class="col s11 offset-s1 country canada"><input class="country-checkbox" type="checkbox" id="canada"><label for="canada">🇨🇦&nbsp;&nbsp;&nbsp;&nbsp;Canada</label></div>
+                        <div class="col s11 offset-s1 country costa-rica"><input class="country-checkbox" type="checkbox" id="costa-rica"><label for="costa-rica">🇨🇷&nbsp;&nbsp;&nbsp;&nbsp;Costa Rica</label></div>
+                        <div class="col s11 offset-s1 country cuba"><input class="country-checkbox" type="checkbox" id="cuba"><label for="cuba">🇨🇺&nbsp;&nbsp;&nbsp;&nbsp;Cuba</label></div>
+                        <div class="col s11 offset-s1 country curacao"><input class="country-checkbox" type="checkbox" id="curacao"><label for="curacao">🇨🇼&nbsp;&nbsp;&nbsp;&nbsp;Curacao</label></div>
+                        <div class="col s11 offset-s1 country dominica"><input class="country-checkbox" type="checkbox" id="dominica"><label for="dominica">🇩🇲&nbsp;&nbsp;&nbsp;&nbsp;Dominica</label></div>
+                        <div class="col s11 offset-s1 country dominican-republic"><input class="country-checkbox" type="checkbox" id="dominican-republic"><label for="dominican-republic">🇩🇴&nbsp;&nbsp;&nbsp;&nbsp;Dominican Republic</label></div>
+                        <div class="col s11 offset-s1 country grenada"><input class="country-checkbox" type="checkbox" id="grenada"><label for="grenada">🇬🇩&nbsp;&nbsp;&nbsp;&nbsp;Grenada</label></div>
+                        <div class="col s11 offset-s1 country greenland"><input class="country-checkbox" type="checkbox" id="greenland"><label for="greenland">🇬🇱&nbsp;&nbsp;&nbsp;&nbsp;Greenland</label></div>
+                        <div class="col s11 offset-s1 country guadeloupe"><input class="country-checkbox" type="checkbox" id="guadeloupe"><label for="guadeloupe">🇬🇵&nbsp;&nbsp;&nbsp;&nbsp;Guadeloupe</label></div>
+                        <div class="col s11 offset-s1 country guatemala"><input class="country-checkbox" type="checkbox" id="guatemala"><label for="guatemala">🇬🇹&nbsp;&nbsp;&nbsp;&nbsp;Guatemala</label></div>
+                        <div class="col s11 offset-s1 country honduras"><input class="country-checkbox" type="checkbox" id="honduras"><label for="honduras">🇭🇳&nbsp;&nbsp;&nbsp;&nbsp;Honduras</label></div>
+                        <div class="col s11 offset-s1 country haiti"><input class="country-checkbox" type="checkbox" id="haiti"><label for="haiti">🇭🇹&nbsp;&nbsp;&nbsp;&nbsp;Haiti</label></div>
+                        <div class="col s11 offset-s1 country jamaica"><input class="country-checkbox" type="checkbox" id="jamaica"><label for="jamaica">🇯🇲&nbsp;&nbsp;&nbsp;&nbsp;Jamaica</label></div>
+                        <div class="col s11 offset-s1 country saint-kitts and nevis"><input class="country-checkbox" type="checkbox" id="saint-kitts and nevis"><label for="saint-kitts and nevis">🇰🇳&nbsp;&nbsp;&nbsp;&nbsp;Saint Kitts and Nevis</label></div>
+                        <div class="col s11 offset-s1 country cayman-islands"><input class="country-checkbox" type="checkbox" id="cayman-islands"><label for="cayman-islands">🇰🇾&nbsp;&nbsp;&nbsp;&nbsp;Cayman Islands</label></div>
+                        <div class="col s11 offset-s1 country saint-lucia"><input class="country-checkbox" type="checkbox" id="saint-lucia"><label for="saint-lucia">🇱🇨&nbsp;&nbsp;&nbsp;&nbsp;Saint Lucia</label></div>
+                        <div class="col s11 offset-s1 country saint-martin"><input class="country-checkbox" type="checkbox" id="saint-martin"><label for="saint-martin">🇲🇫&nbsp;&nbsp;&nbsp;&nbsp;Saint Martin</label></div>
+                        <div class="col s11 offset-s1 country martinique"><input class="country-checkbox" type="checkbox" id="martinique"><label for="martinique">🇲🇶&nbsp;&nbsp;&nbsp;&nbsp;Martinique</label></div>
+                        <div class="col s11 offset-s1 country montserrat"><input class="country-checkbox" type="checkbox" id="montserrat"><label for="montserrat">🇲🇸&nbsp;&nbsp;&nbsp;&nbsp;Montserrat</label></div>
+                        <div class="col s11 offset-s1 country mexico"><input class="country-checkbox" type="checkbox" id="mexico"><label for="mexico">🇲🇽&nbsp;&nbsp;&nbsp;&nbsp;Mexico</label></div>
+                        <div class="col s11 offset-s1 country nicaragua"><input class="country-checkbox" type="checkbox" id="nicaragua"><label for="nicaragua">🇳🇮&nbsp;&nbsp;&nbsp;&nbsp;Nicaragua</label></div>
+                        <div class="col s11 offset-s1 country panama"><input class="country-checkbox" type="checkbox" id="panama"><label for="panama">🇵🇦&nbsp;&nbsp;&nbsp;&nbsp;Panama</label></div>
+                        <div class="col s11 offset-s1 country saint-pierre and miquelon"><input class="country-checkbox" type="checkbox" id="saint-pierre and miquelon"><label for="saint-pierre and miquelon">🇵🇲&nbsp;&nbsp;&nbsp;&nbsp;Saint Pierre and Miquelon</label></div>
+                        <div class="col s11 offset-s1 country puerto-rico"><input class="country-checkbox" type="checkbox" id="puerto-rico"><label for="puerto-rico">🇵🇷&nbsp;&nbsp;&nbsp;&nbsp;Puerto Rico</label></div>
+                        <div class="col s11 offset-s1 country el-salvador"><input class="country-checkbox" type="checkbox" id="el-salvador"><label for="el-salvador">🇸🇻&nbsp;&nbsp;&nbsp;&nbsp;El Salvador</label></div>
+                        <div class="col s11 offset-s1 country sint-maarten"><input class="country-checkbox" type="checkbox" id="sint-maarten"><label for="sint-maarten">🇸🇽&nbsp;&nbsp;&nbsp;&nbsp;Sint Maarten</label></div>
+                        <div class="col s11 offset-s1 country turks-and caicos islands"><input class="country-checkbox" type="checkbox" id="turks-and caicos islands"><label for="turks-and caicos islands">🇹🇨&nbsp;&nbsp;&nbsp;&nbsp;Turks and Caicos Islands</label></div>
+                        <div class="col s11 offset-s1 country trinidad-and tobago"><input class="country-checkbox" type="checkbox" id="trinidad-and tobago"><label for="trinidad-and tobago">🇹🇹&nbsp;&nbsp;&nbsp;&nbsp;Trinidad and Tobago</label></div>
+                        <div class="col s11 offset-s1 country united-states"><input class="country-checkbox" type="checkbox" id="united-states"><label for="united-states">🇺🇸&nbsp;&nbsp;&nbsp;&nbsp;United States</label></div>
+                        <div class="col s11 offset-s1 country saint-vincent and the grenadines"><input class="country-checkbox" type="checkbox" id="saint-vincent and the grenadines"><label for="saint-vincent and the grenadines">🇻🇨&nbsp;&nbsp;&nbsp;&nbsp;Saint Vincent and the Grenadines</label></div>
+                        <div class="col s11 offset-s1 country british-virgin islands"><input class="country-checkbox" type="checkbox" id="british-virgin islands"><label for="british-virgin islands">🇻🇬&nbsp;&nbsp;&nbsp;&nbsp;British Virgin Islands</label></div>
+                        <div class="col s11 offset-s1 country u.s.-virgin islands"><input class="country-checkbox" type="checkbox" id="u.s.-virgin islands"><label for="u.s.-virgin islands">🇻🇮&nbsp;&nbsp;&nbsp;&nbsp;U.S. Virgin Islands</label></div>
+                    </div>
+                </li>
+                <li class="col s12 continent Oceania">
+                    <div class="col s10 m11 continent-label"> <input class="continent-checkbox" type="checkbox" id="Oceania"> <label for="Oceania">Oceania</label> </div>
+                    <div class="col s1 m1 collapsible-header"> <span><i class="fa fa-arrow-down fa-lg"></i></span> </div>
+                    <div class="col s12 collapsible-body">
+                        <div class="col s11 offset-s1 country american-samoa"><input class="country-checkbox" type="checkbox" id="american-samoa"><label for="american-samoa">🇦🇸&nbsp;&nbsp;&nbsp;&nbsp;American Samoa</label></div>
+                        <div class="col s11 offset-s1 country australia"><input class="country-checkbox" type="checkbox" id="australia"><label for="australia">🇦🇺&nbsp;&nbsp;&nbsp;&nbsp;Australia</label></div>
+                        <div class="col s11 offset-s1 country cook-islands"><input class="country-checkbox" type="checkbox" id="cook-islands"><label for="cook-islands">🇨🇰&nbsp;&nbsp;&nbsp;&nbsp;Cook Islands</label></div>
+                        <div class="col s11 offset-s1 country fiji"><input class="country-checkbox" type="checkbox" id="fiji"><label for="fiji">🇫🇯&nbsp;&nbsp;&nbsp;&nbsp;Fiji</label></div>
+                        <div class="col s11 offset-s1 country micronesia"><input class="country-checkbox" type="checkbox" id="micronesia"><label for="micronesia">🇫🇲&nbsp;&nbsp;&nbsp;&nbsp;Micronesia</label></div>
+                        <div class="col s11 offset-s1 country guam"><input class="country-checkbox" type="checkbox" id="guam"><label for="guam">🇬🇺&nbsp;&nbsp;&nbsp;&nbsp;Guam</label></div>
+                        <div class="col s11 offset-s1 country kiribati"><input class="country-checkbox" type="checkbox" id="kiribati"><label for="kiribati">🇰🇮&nbsp;&nbsp;&nbsp;&nbsp;Kiribati</label></div>
+                        <div class="col s11 offset-s1 country marshall-islands"><input class="country-checkbox" type="checkbox" id="marshall-islands"><label for="marshall-islands">🇲🇭&nbsp;&nbsp;&nbsp;&nbsp;Marshall Islands</label></div>
+                        <div class="col s11 offset-s1 country northern-mariana islands"><input class="country-checkbox" type="checkbox" id="northern-mariana islands"><label for="northern-mariana islands">🇲🇵&nbsp;&nbsp;&nbsp;&nbsp;Northern Mariana Islands</label></div>
+                        <div class="col s11 offset-s1 country new-caledonia"><input class="country-checkbox" type="checkbox" id="new-caledonia"><label for="new-caledonia">🇳🇨&nbsp;&nbsp;&nbsp;&nbsp;New Caledonia</label></div>
+                        <div class="col s11 offset-s1 country norfolk-island"><input class="country-checkbox" type="checkbox" id="norfolk-island"><label for="norfolk-island">🇳🇫&nbsp;&nbsp;&nbsp;&nbsp;Norfolk Island</label></div>
+                        <div class="col s11 offset-s1 country nauru"><input class="country-checkbox" type="checkbox" id="nauru"><label for="nauru">🇳🇷&nbsp;&nbsp;&nbsp;&nbsp;Nauru</label></div>
+                        <div class="col s11 offset-s1 country niue"><input class="country-checkbox" type="checkbox" id="niue"><label for="niue">🇳🇺&nbsp;&nbsp;&nbsp;&nbsp;Niue</label></div>
+                        <div class="col s11 offset-s1 country new-zealand"><input class="country-checkbox" type="checkbox" id="new-zealand"><label for="new-zealand">🇳🇿&nbsp;&nbsp;&nbsp;&nbsp;New Zealand</label></div>
+                        <div class="col s11 offset-s1 country french-polynesia"><input class="country-checkbox" type="checkbox" id="french-polynesia"><label for="french-polynesia">🇵🇫&nbsp;&nbsp;&nbsp;&nbsp;French Polynesia</label></div>
+                        <div class="col s11 offset-s1 country papua-new guinea"><input class="country-checkbox" type="checkbox" id="papua-new guinea"><label for="papua-new guinea">🇵🇬&nbsp;&nbsp;&nbsp;&nbsp;Papua New Guinea</label></div>
+                        <div class="col s11 offset-s1 country pitcairn-islands"><input class="country-checkbox" type="checkbox" id="pitcairn-islands"><label for="pitcairn-islands">🇵🇳&nbsp;&nbsp;&nbsp;&nbsp;Pitcairn Islands</label></div>
+                        <div class="col s11 offset-s1 country palau"><input class="country-checkbox" type="checkbox" id="palau"><label for="palau">🇵🇼&nbsp;&nbsp;&nbsp;&nbsp;Palau</label></div>
+                        <div class="col s11 offset-s1 country solomon-islands"><input class="country-checkbox" type="checkbox" id="solomon-islands"><label for="solomon-islands">🇸🇧&nbsp;&nbsp;&nbsp;&nbsp;Solomon Islands</label></div>
+                        <div class="col s11 offset-s1 country tokelau"><input class="country-checkbox" type="checkbox" id="tokelau"><label for="tokelau">🇹🇰&nbsp;&nbsp;&nbsp;&nbsp;Tokelau</label></div>
+                        <div class="col s11 offset-s1 country east-timor"><input class="country-checkbox" type="checkbox" id="east-timor"><label for="east-timor">🇹🇱&nbsp;&nbsp;&nbsp;&nbsp;East Timor</label></div>
+                        <div class="col s11 offset-s1 country tonga"><input class="country-checkbox" type="checkbox" id="tonga"><label for="tonga">🇹🇴&nbsp;&nbsp;&nbsp;&nbsp;Tonga</label></div>
+                        <div class="col s11 offset-s1 country tuvalu"><input class="country-checkbox" type="checkbox" id="tuvalu"><label for="tuvalu">🇹🇻&nbsp;&nbsp;&nbsp;&nbsp;Tuvalu</label></div>
+                        <div class="col s11 offset-s1 country u.s.-minor outlying islands"><input class="country-checkbox" type="checkbox" id="u.s.-minor outlying islands"><label for="u.s.-minor outlying islands">🇺🇲&nbsp;&nbsp;&nbsp;&nbsp;U.S. Minor Outlying Islands</label></div>
+                        <div class="col s11 offset-s1 country vanuatu"><input class="country-checkbox" type="checkbox" id="vanuatu"><label for="vanuatu">🇻🇺&nbsp;&nbsp;&nbsp;&nbsp;Vanuatu</label></div>
+                        <div class="col s11 offset-s1 country wallis-and futuna"><input class="country-checkbox" type="checkbox" id="wallis-and futuna"><label for="wallis-and futuna">🇼🇫&nbsp;&nbsp;&nbsp;&nbsp;Wallis and Futuna</label></div>
+                        <div class="col s11 offset-s1 country samoa"><input class="country-checkbox" type="checkbox" id="samoa"><label for="samoa">🇼🇸&nbsp;&nbsp;&nbsp;&nbsp;Samoa</label></div>
+                    </div>
+                </li>
+                <li class="col s12 continent South America">
+                    <div class="col s10 m11 continent-label"> <input class="continent-checkbox" type="checkbox" id="South America"> <label for="South America">South America</label> </div>
+                    <div class="col s1 m1 collapsible-header"> <span><i class="fa fa-arrow-down fa-lg"></i></span> </div>
+                    <div class="col s12 collapsible-body">
+                        <div class="col s11 offset-s1 country argentina"><input class="country-checkbox" type="checkbox" id="argentina"><label for="argentina">🇦🇷&nbsp;&nbsp;&nbsp;&nbsp;Argentina</label></div>
+                        <div class="col s11 offset-s1 country bolivia"><input class="country-checkbox" type="checkbox" id="bolivia"><label for="bolivia">🇧🇴&nbsp;&nbsp;&nbsp;&nbsp;Bolivia</label></div>
+                        <div class="col s11 offset-s1 country brazil"><input class="country-checkbox" type="checkbox" id="brazil"><label for="brazil">🇧🇷&nbsp;&nbsp;&nbsp;&nbsp;Brazil</label></div>
+                        <div class="col s11 offset-s1 country chile"><input class="country-checkbox" type="checkbox" id="chile"><label for="chile">🇨🇱&nbsp;&nbsp;&nbsp;&nbsp;Chile</label></div>
+                        <div class="col s11 offset-s1 country colombia"><input class="country-checkbox" type="checkbox" id="colombia"><label for="colombia">🇨🇴&nbsp;&nbsp;&nbsp;&nbsp;Colombia</label></div>
+                        <div class="col s11 offset-s1 country ecuador"><input class="country-checkbox" type="checkbox" id="ecuador"><label for="ecuador">🇪🇨&nbsp;&nbsp;&nbsp;&nbsp;Ecuador</label></div>
+                        <div class="col s11 offset-s1 country falkland-islands"><input class="country-checkbox" type="checkbox" id="falkland-islands"><label for="falkland-islands">🇫🇰&nbsp;&nbsp;&nbsp;&nbsp;Falkland Islands</label></div>
+                        <div class="col s11 offset-s1 country french-guiana"><input class="country-checkbox" type="checkbox" id="french-guiana"><label for="french-guiana">🇬🇫&nbsp;&nbsp;&nbsp;&nbsp;French Guiana</label></div>
+                        <div class="col s11 offset-s1 country guyana"><input class="country-checkbox" type="checkbox" id="guyana"><label for="guyana">🇬🇾&nbsp;&nbsp;&nbsp;&nbsp;Guyana</label></div>
+                        <div class="col s11 offset-s1 country peru"><input class="country-checkbox" type="checkbox" id="peru"><label for="peru">🇵🇪&nbsp;&nbsp;&nbsp;&nbsp;Peru</label></div>
+                        <div class="col s11 offset-s1 country paraguay"><input class="country-checkbox" type="checkbox" id="paraguay"><label for="paraguay">🇵🇾&nbsp;&nbsp;&nbsp;&nbsp;Paraguay</label></div>
+                        <div class="col s11 offset-s1 country suriname"><input class="country-checkbox" type="checkbox" id="suriname"><label for="suriname">🇸🇷&nbsp;&nbsp;&nbsp;&nbsp;Suriname</label></div>
+                        <div class="col s11 offset-s1 country uruguay"><input class="country-checkbox" type="checkbox" id="uruguay"><label for="uruguay">🇺🇾&nbsp;&nbsp;&nbsp;&nbsp;Uruguay</label></div>
+                        <div class="col s11 offset-s1 country venezuela"><input class="country-checkbox" type="checkbox" id="venezuela"><label for="venezuela">🇻🇪&nbsp;&nbsp;&nbsp;&nbsp;Venezuela</label></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <a id="cancel" href="#" class="modal-action modal-close waves-effect btn waves-green purple_button">Cancel</a>
+        <a id="add" href="#" class="modal-action modal-close waves-effect btn stroke-btn tap">Add</a>
+    </div>
+</div>
+
 </body>
 </html>
