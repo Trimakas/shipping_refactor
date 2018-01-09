@@ -147,19 +147,25 @@
 
         <div id="page-6" class="col s10 m8 l6 offset-s1 offset-m2 offset-l3 card large hide">
             <div class="card-image">
-                <%= image_tag "6.png" %>
-                <span class="card-title"></span>
+                <div class="row">
+                    <p class="page">1</p>
+                    <p class="page">2</p>
+                    <p class="page">3</p>
+                    <p class="page">4</p>
+                    <p class="page">5</p>
+                    <p class="page selected">6</p>
+                </div>
             </div>
             <div class="card-content">
                 <div class="row">
-                    <div class="col s12 l8 offset-l2">
+                    <div class="col s12">
                         <p class="center-align">
                             The credentials you recieve will look like this, and you will enter these credentials in the next section.
                         </p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col s12 l8 offset-l2 center-align">
+                    <div class="col s12 m10 offset-m1 center-align">
                         <%= image_tag "creds-short.png", class: "responsive-img zero-padding_image z-depth-3" %>
                     </div>
                 </div>
@@ -169,17 +175,25 @@
 
         <div id="page-5" class="col s10 m8 l6 offset-s1 offset-m2 offset-l3 card large hide">
             <div class="card-image">
-                <%= image_tag "5.png" %>
-                <span class="card-title"></span>
+                <div class="row">
+                    <p class="page">1</p>
+                    <p class="page">2</p>
+                    <p class="page">3</p>
+                    <p class="page">4</p>
+                    <p class="page selected">5</p>
+                    <p class="page">6</p>
+                </div>
             </div>
             <div class="card-content">
                 <div class="row">
-                    <div class="col s12 m6 bot-marg">
+                    <div class="col s12">
                         <p class="center-align">
                             Next within Amazon, enter in our name "ByteStand" and the developer id you copied in the previous step.
                         </p>
                     </div>
-                    <div class="col s12 m6">
+                </div>
+                <div class="row">
+                    <div class="col s12 m6 offset-m3">
                         <%= image_tag "enter-info.gif", class: "responsive-img zero-padding_image z-depth-3" %>
                     </div>
                 </div>
@@ -188,17 +202,25 @@
 
         <div id="page-4" class="col s10 m8 l6 offset-s1 offset-m2 offset-l3 card large hide">
             <div class="card-image">
-                <%= image_tag "4.png" %>
-                <span class="card-title"></span>
+                <div class="row">
+                    <p class="page">1</p>
+                    <p class="page">2</p>
+                    <p class="page">3</p>
+                    <p class="page selected">4</p>
+                    <p class="page">5</p>
+                    <p class="page">6</p>
+                </div>
             </div>
             <div class="card-content">
                 <div class="row">
-                    <div class="col s12 m6 bot-marg">
+                    <div class="col s12">
                         <p class="center-align">
                             Now, open up your Amazon seller dashboard and authorize a developer.
                         </p>
                     </div>
-                    <div class="col s12 m6">
+                </div>
+                <div class="row">
+                    <div class="col s12 m6 offset-m3">
                         <%= image_tag "user-permissions.gif", class: "responsive-img zero-padding_image z-depth-3" %>
                     </div>
                 </div>
@@ -207,8 +229,14 @@
 
         <div id="page-3" class="col s10 m8 l6 offset-s1 offset-m2 offset-l3 card large hide">
             <div class="card-image">
-                <%= image_tag "3.png" %>
-                <span class="card-title"></span>
+                <div class="row">
+                    <p class="page">1</p>
+                    <p class="page">2</p>
+                    <p class="page selected">3</p>
+                    <p class="page">4</p>
+                    <p class="page">5</p>
+                    <p class="page">6</p>
+                </div>
             </div>
             <div class="card-content">
                 <div class="row">
@@ -223,31 +251,27 @@
                             </div>
                         </div>
 
-                        <div class="row bot-marg">
-                            <div class="col s12 zero-padding">
-                                <div class="row zero-margin">
-                                    <p class="bold">North America</p>
-                                    <div class="col s12 l8 zero-padding">
-                                        <input type="text" class="dev_id_us center-align fixed_input" value="9152-6216-7461" readonly>
-                                    </div>
-                                    <div class="col s12 l4 zero-padding">
-                                        <button data-clipboard-text="9152-6216-7461" class="us_copy btn waves-effect waves-light fixed_button purple_button">copy</button>
-                                    </div>
-                                </div>
+                        <div class="row zero-margin top-pad">
+                            <div class="col s12 m12 l3 zero-padding center-align" style="line-height: 23px;">
+                                North America, Mexico
+                            </div>
+                            <div class="col s10 m5 l5 offset-s1 offset-m1 offset-l1 zero-padding">
+                                <input type="text" class="dev_id_us center-align fixed_input shadowed zero-padding" value="9152-6216-7461" readonly>
+                            </div>
+                            <div class="col s10 m5 l3 offset-s1 zero-padding">
+                                <button data-clipboard-text="9152-6216-7461" class="us_copy btn shadowed waves-effect waves-light fixed_button purple_button">copy</button>
                             </div>
                         </div>
 
-                        <div class="row bot-marg">
-                            <div class="col s12 zero-padding">
-                                <div class="row zero-margin">
-                                    <p class="bold">EU & UK</p>
-                                    <div class="col s12 l8 zero-padding">
-                                        <input id="dev_id_eu" type="text" class="center-align fixed_input" value="4048-6340-0484" readonly>
-                                    </div>
-                                    <div class="col s12 l4 zero-padding">
-                                        <button id="eu_copy" data-clipboard-text="4048-6340-0484" class="btn waves-effect waves-light fixed_button purple_button">copy</button>
-                                    </div>
-                                </div>
+                        <div class="row zero-margin">
+                            <div class="col s12 m12 l3 zero-padding center-align" style="line-height: 46px;">
+                                EU &amp; UK
+                            </div>
+                            <div class="col s10 m5 l5 offset-s1 offset-m1 offset-l1 zero-padding">
+                                <input id="dev_id_eu" type="text" class="center-align fixed_input shadowed zero-padding" value="4048-6340-0484" readonly>
+                            </div>
+                            <div class="col s10 m5 l3 offset-s1 zero-padding">
+                                <button id="eu_copy" data-clipboard-text="4048-6340-0484" class="btn shadowed waves-effect waves-light fixed_button purple_button">copy</button>
                             </div>
                         </div>
                     </div>
@@ -257,8 +281,14 @@
 
         <div id="page-2" class="col s10 m8 l6 offset-s1 offset-m2 offset-l3 card large hide">
             <div class="card-image">
-                <%= image_tag "2.png" %>
-                <span class="card-title"></span>
+                <div class="row">
+                    <p class="page">1</p>
+                    <p class="page selected">2</p>
+                    <p class="page">3</p>
+                    <p class="page">4</p>
+                    <p class="page">5</p>
+                    <p class="page">6</p>
+                </div>
             </div>
             <div class="card-content">
                 <div class="row">
@@ -267,6 +297,8 @@
                             You will need to enable carrier calculated shipping
                             on your Shopify store. Its free if you signed
                             up for the annual plan or are on the advanced plan, otherwise its just $20/month.
+                        </p>
+                        <p>
                             Call Shopify to enable it:
                         </p>
                     </div>
@@ -286,11 +318,17 @@
 
         <div id="page-1" class="col s10 m8 l6 offset-s1 offset-m2 offset-l3 card large hide">
             <div class="card-image">
-                <%= image_tag "1.png" %>
-                <span class="card-title"></span>
+                <div class="row">
+                    <p class="page selected">1</p>
+                    <p class="page">2</p>
+                    <p class="page">3</p>
+                    <p class="page">4</p>
+                    <p class="page">5</p>
+                    <p class="page">6</p>
+                </div>
             </div>
             <div class="card-content valign-wrapper">
-                <div class="row">
+                <div class="row text-middle">
                     <div class="col s12 l8 offset-l2">
                         <p class="center-align">
                             For $25/month we fulfill an unlimited number of
@@ -307,8 +345,8 @@
                 <%= image_tag "hi.png" %>
                 <span class="card-title"></span>
             </div>
-            <div class="card-content valign-wrapper">
-                <div class="row">
+            <div class="card-content">
+                <div class="row text-middle">
                     <div class="col s12 l8 offset-l2">
                         <p class="center-align">
                             Welcome to FBA Shipping by ByteStand.
